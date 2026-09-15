@@ -1,0 +1,278 @@
+[
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 20,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 19,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 18,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 17,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 16,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 15,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 14,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 13,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 12,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 11,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 10,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 9,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 8,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 7,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 6,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 5,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 4,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 3,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 2,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 1,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "poll",
+    "message": "not loaded yet",
+    "attemptsLeft": 0,
+    "modules": [
+      "libdl.so",
+      "ld-android.so",
+      "libm.so",
+      "libc.so",
+      "liblog.so",
+      "libc++.so"
+    ]
+  },
+  {
+    "type": "giveup"
+  }
+]

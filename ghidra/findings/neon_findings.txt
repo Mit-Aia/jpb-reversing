@@ -1,0 +1,544 @@
+FOUND symbol _transformVertexNeon -> function _transformVertexNeon @ 0047b920
+FOUND symbol _rotateVertexNeon -> function _rotateVertexNeon @ 0047b9c4
+FOUND symbol _addVertexNeon -> function _addVertexNeon @ 0047ba5c
+FOUND symbol _transformVertex -> function _transformVertex @ 0047bb14
+FOUND symbol _rotateVertex -> function _rotateVertex @ 0047bbcc
+FOUND symbol _addVertex -> function _addVertex @ 0047bc84
+
+total target funcs: 6, callers: 0
+
+----- FUNCTION _transformVertexNeon @ 0047b920 -----
+
+/* WARNING: Restarted to delay deadcode elimination for space: register */
+
+undefined8
+_transformVertexNeon
+          (undefined8 *param_1,undefined8 *param_2,undefined1 (*param_3) [16],int *param_4)
+
+{
+  undefined4 uVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  undefined1 auVar6 [16];
+  undefined1 auVar7 [16];
+  undefined1 auVar8 [16];
+  undefined1 auVar9 [16];
+  undefined1 auVar10 [16];
+  undefined1 auVar11 [16];
+  undefined1 auVar12 [16];
+  undefined8 *puVar13;
+  undefined8 *puVar14;
+  int iVar15;
+  int iVar16;
+  undefined1 (*pauVar17) [16];
+  undefined8 *puVar18;
+  undefined8 uVar21;
+  undefined1 auVar22 [16];
+  undefined1 auVar23 [16];
+  undefined1 auVar24 [16];
+  undefined8 *puVar19;
+  undefined8 *puVar20;
+  
+  iVar15 = *param_4;
+  param_4 = param_4 + 1;
+  puVar13 = param_1;
+  puVar14 = param_2;
+  do {
+    auVar9 = *param_3;
+    auVar2 = *param_3;
+    auVar23 = *param_3;
+    pauVar17 = param_3 + 1;
+    auVar10 = *pauVar17;
+    auVar4 = *pauVar17;
+    auVar3 = *pauVar17;
+    pauVar17 = param_3 + 2;
+    auVar11 = *pauVar17;
+    auVar6 = *pauVar17;
+    auVar5 = *pauVar17;
+    pauVar17 = param_3 + 3;
+    auVar12 = *pauVar17;
+    auVar8 = *pauVar17;
+    auVar7 = *pauVar17;
+    param_3 = param_3 + 4;
+    iVar16 = *param_4;
+    param_4 = param_4 + 1;
+    while( true ) {
+      if (iVar16 < 2) break;
+      param_4 = param_4 + 2;
+      uVar21 = *puVar13;
+      puVar18 = puVar13 + 1;
+      puVar19 = puVar13 + 2;
+      puVar20 = puVar13 + 3;
+      puVar13 = puVar13 + 4;
+      uVar1 = VectorGetElement(uVar21,0,4,0);
+      VectorMultiply(auVar23,uVar1,4);
+      uVar1 = VectorGetElement(*puVar19,0,4,0);
+      VectorMultiply(auVar2,uVar1,4);
+      uVar1 = VectorGetElement(uVar21,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar3,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar19,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar4,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar18,0,4,0);
+      auVar22 = FloatVectorMultiplyAccumulate(auVar5,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar20,0,4,0);
+      auVar24 = FloatVectorMultiplyAccumulate(auVar6,uVar1,2,0x20);
+      auVar22 = FloatVectorAdd(auVar22,auVar7,2);
+      auVar24 = FloatVectorAdd(auVar24,auVar8,2);
+      uVar1 = VectorGetElement(*puVar18,1,4,0);
+      auVar22 = VectorMultiply(auVar22,uVar1,4);
+      uVar1 = VectorGetElement(*puVar20,1,4,0);
+      auVar24 = VectorMultiply(auVar24,uVar1,4);
+      *puVar14 = auVar22._0_8_;
+      *(int *)(puVar14 + 1) = auVar22._8_4_;
+      *(longlong *)((int)puVar14 + 0xc) = auVar24._0_8_;
+      *(int *)((int)puVar14 + 0x14) = auVar24._8_4_;
+      puVar14 = puVar14 + 3;
+      iVar16 = iVar16 + -2;
+    }
+    if (iVar16 + -2 == -1) {
+      param_4 = param_4 + 1;
+      uVar21 = *puVar13;
+      puVar18 = puVar13 + 1;
+      puVar13 = puVar13 + 2;
+      uVar1 = VectorGetElement(uVar21,0,4,0);
+      VectorMultiply(auVar9,uVar1,4);
+      uVar1 = VectorGetElement(uVar21,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar10,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar18,0,4,0);
+      auVar23 = FloatVectorMultiplyAccumulate(auVar11,uVar1,2,0x20);
+      auVar23 = FloatVectorAdd(auVar23,auVar12,2);
+      uVar1 = VectorGetElement(*puVar18,1,4,0);
+      auVar23 = VectorMultiply(auVar23,uVar1,4);
+      *puVar14 = auVar23._0_8_;
+      *(int *)(puVar14 + 1) = auVar23._8_4_;
+      puVar14 = (undefined8 *)((int)puVar14 + 0xc);
+    }
+    iVar15 = iVar15 + -1;
+  } while (iVar15 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
+
+----- FUNCTION _rotateVertexNeon @ 0047b9c4 -----
+
+/* WARNING: Restarted to delay deadcode elimination for space: register */
+
+undefined8
+_rotateVertexNeon(undefined8 *param_1,undefined8 *param_2,undefined1 (*param_3) [16],int *param_4)
+
+{
+  undefined4 uVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  undefined1 auVar6 [16];
+  undefined1 auVar7 [16];
+  undefined1 auVar8 [16];
+  undefined1 auVar9 [16];
+  undefined8 *puVar10;
+  undefined8 *puVar11;
+  int iVar12;
+  int iVar13;
+  undefined1 (*pauVar14) [16];
+  undefined8 *puVar15;
+  undefined8 uVar18;
+  undefined1 auVar19 [16];
+  undefined1 auVar20 [16];
+  undefined1 auVar21 [16];
+  undefined8 *puVar16;
+  undefined8 *puVar17;
+  
+  iVar12 = *param_4;
+  param_4 = param_4 + 1;
+  puVar10 = param_1;
+  puVar11 = param_2;
+  do {
+    auVar7 = *param_3;
+    auVar2 = *param_3;
+    auVar20 = *param_3;
+    pauVar14 = param_3 + 1;
+    auVar8 = *pauVar14;
+    auVar4 = *pauVar14;
+    auVar3 = *pauVar14;
+    pauVar14 = param_3 + 2;
+    auVar9 = *pauVar14;
+    auVar6 = *pauVar14;
+    auVar5 = *pauVar14;
+    param_3 = param_3 + 4;
+    iVar13 = *param_4;
+    param_4 = param_4 + 1;
+    while( true ) {
+      if (iVar13 < 2) break;
+      param_4 = param_4 + 2;
+      uVar18 = *puVar10;
+      puVar15 = puVar10 + 1;
+      puVar16 = puVar10 + 2;
+      puVar17 = puVar10 + 3;
+      puVar10 = puVar10 + 4;
+      uVar1 = VectorGetElement(uVar18,0,4,0);
+      VectorMultiply(auVar20,uVar1,4);
+      uVar1 = VectorGetElement(*puVar16,0,4,0);
+      VectorMultiply(auVar2,uVar1,4);
+      uVar1 = VectorGetElement(uVar18,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar3,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar16,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar4,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar15,0,4,0);
+      auVar19 = FloatVectorMultiplyAccumulate(auVar5,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar17,0,4,0);
+      auVar21 = FloatVectorMultiplyAccumulate(auVar6,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar15,1,4,0);
+      auVar19 = VectorMultiply(auVar19,uVar1,4);
+      uVar1 = VectorGetElement(*puVar17,1,4,0);
+      auVar21 = VectorMultiply(auVar21,uVar1,4);
+      *puVar11 = auVar19._0_8_;
+      *(int *)(puVar11 + 1) = auVar19._8_4_;
+      *(longlong *)((int)puVar11 + 0xc) = auVar21._0_8_;
+      *(int *)((int)puVar11 + 0x14) = auVar21._8_4_;
+      puVar11 = puVar11 + 3;
+      iVar13 = iVar13 + -2;
+    }
+    if (iVar13 + -2 == -1) {
+      param_4 = param_4 + 1;
+      uVar18 = *puVar10;
+      puVar15 = puVar10 + 1;
+      puVar10 = puVar10 + 2;
+      uVar1 = VectorGetElement(uVar18,0,4,0);
+      VectorMultiply(auVar7,uVar1,4);
+      uVar1 = VectorGetElement(uVar18,1,4,0);
+      FloatVectorMultiplyAccumulate(auVar8,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar15,0,4,0);
+      auVar20 = FloatVectorMultiplyAccumulate(auVar9,uVar1,2,0x20);
+      uVar1 = VectorGetElement(*puVar15,1,4,0);
+      auVar20 = VectorMultiply(auVar20,uVar1,4);
+      *puVar11 = auVar20._0_8_;
+      *(int *)(puVar11 + 1) = auVar20._8_4_;
+      puVar11 = (undefined8 *)((int)puVar11 + 0xc);
+    }
+    iVar12 = iVar12 + -1;
+  } while (iVar12 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
+
+----- FUNCTION _addVertexNeon @ 0047ba5c -----
+
+/* WARNING: Restarted to delay deadcode elimination for space: register */
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+
+undefined8 _addVertexNeon(undefined8 *param_1,int param_2,int *param_3)
+
+{
+  int *piVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  undefined1 auVar4 [16];
+  undefined8 *puVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  undefined8 *puVar9;
+  undefined8 *puVar10;
+  undefined8 uVar11;
+  undefined4 uVar12;
+  undefined8 in_d1;
+  undefined8 uVar13;
+  undefined8 in_d3;
+  undefined1 in_q12 [16];
+  undefined1 auVar14 [16];
+  undefined1 auVar15 [16];
+  undefined1 in_q13 [16];
+  undefined1 auVar16 [16];
+  
+  iVar6 = *param_3;
+  param_3 = param_3 + 1;
+  puVar5 = param_1;
+  do {
+    iVar7 = *param_3;
+    param_3 = param_3 + 1;
+    while( true ) {
+      auVar14._8_8_ = in_q12._8_8_;
+      if (iVar7 < 2) break;
+      uVar11 = *puVar5;
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)(puVar5 + 1);
+      uVar13 = *(undefined8 *)((int)puVar5 + 0xc);
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)((int)puVar5 + 0x14);
+      puVar5 = puVar5 + 3;
+      iVar8 = *param_3;
+      piVar1 = param_3 + 1;
+      param_3 = param_3 + 2;
+      puVar9 = (undefined8 *)(iVar8 + param_2);
+      puVar10 = (undefined8 *)(*piVar1 + param_2);
+      auVar14._0_8_ = *puVar9;
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)(puVar9 + 1);
+      auVar3._8_8_ = in_d1;
+      auVar3._0_8_ = uVar11;
+      in_q12 = FloatVectorAdd(auVar14,auVar3,2);
+      *puVar9 = in_q12._0_8_;
+      *(int *)(puVar9 + 1) = in_q12._8_4_;
+      auVar16._8_8_ = in_q13._8_8_;
+      auVar16._0_8_ = *puVar10;
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)(puVar10 + 1);
+      auVar4._8_8_ = in_d3;
+      auVar4._0_8_ = uVar13;
+      in_q13 = FloatVectorAdd(auVar16,auVar4,2);
+      *puVar10 = in_q13._0_8_;
+      *(int *)(puVar10 + 1) = in_q13._8_4_;
+      iVar7 = iVar7 + -2;
+    }
+    if (iVar7 + -2 == -1) {
+      uVar11 = *puVar5;
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)(puVar5 + 1);
+      puVar5 = (undefined8 *)((int)puVar5 + 0xc);
+      iVar7 = *param_3;
+      param_3 = param_3 + 1;
+      puVar9 = (undefined8 *)(iVar7 + param_2);
+      auVar15._0_8_ = *puVar9;
+      auVar15._8_8_ = auVar14._8_8_;
+                    /* WARNING: Ignoring partial resolution of indirect */
+      uVar12 = *(undefined4 *)(puVar9 + 1);
+      auVar2._8_8_ = in_d1;
+      auVar2._0_8_ = uVar11;
+      in_q12 = FloatVectorAdd(auVar15,auVar2,2);
+      *puVar9 = in_q12._0_8_;
+      *(int *)(puVar9 + 1) = in_q12._8_4_;
+    }
+    iVar6 = iVar6 + -1;
+  } while (iVar6 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
+
+----- FUNCTION _transformVertex @ 0047bb14 -----
+
+undefined8 _transformVertex(float *param_1,float *param_2,float *param_3,int *param_4)
+
+{
+  float *pfVar1;
+  float *pfVar2;
+  int iVar3;
+  int iVar4;
+  float *pfVar5;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  float fVar11;
+  float fVar12;
+  float in_s9;
+  float in_s10;
+  float in_s13;
+  float in_s14;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  float fVar16;
+  float *pfVar6;
+  float *pfVar7;
+  
+  iVar3 = *param_4;
+  param_4 = param_4 + 1;
+  pfVar1 = param_1;
+  pfVar2 = param_2;
+  do {
+    fVar13 = *param_3;
+    fVar14 = param_3[4];
+    fVar15 = param_3[8];
+    fVar16 = param_3[0xc];
+    param_3 = param_3 + 0x10;
+    iVar4 = *param_4;
+    param_4 = param_4 + 1;
+    while (1 < iVar4) {
+      param_4 = param_4 + 2;
+      fVar8 = *pfVar1;
+      pfVar5 = pfVar1 + 1;
+      pfVar6 = pfVar1 + 2;
+      pfVar7 = pfVar1 + 3;
+      fVar9 = pfVar1[4];
+      fVar10 = pfVar1[5];
+      fVar11 = pfVar1[6];
+      fVar12 = pfVar1[7];
+      pfVar1 = pfVar1 + 8;
+      *pfVar2 = (fVar16 + fVar13 * fVar8 + fVar14 * *pfVar5 + fVar15 * *pfVar6) * *pfVar7;
+      pfVar2[1] = in_s9;
+      pfVar2[2] = in_s10;
+      pfVar2[3] = (fVar16 + fVar13 * fVar9 + fVar14 * fVar10 + fVar15 * fVar11) * fVar12;
+      pfVar2[4] = in_s13;
+      pfVar2[5] = in_s14;
+      pfVar2 = pfVar2 + 6;
+      iVar4 = iVar4 + -2;
+    }
+    if (iVar4 + -2 == -1) {
+      param_4 = param_4 + 1;
+      fVar8 = *pfVar1;
+      pfVar5 = pfVar1 + 1;
+      pfVar6 = pfVar1 + 2;
+      pfVar7 = pfVar1 + 3;
+      pfVar1 = pfVar1 + 4;
+      *pfVar2 = (fVar16 + fVar13 * fVar8 + fVar14 * *pfVar5 + fVar15 * *pfVar6) * *pfVar7;
+      pfVar2[1] = in_s9;
+      pfVar2[2] = in_s10;
+      pfVar2 = pfVar2 + 3;
+    }
+    iVar3 = iVar3 + -1;
+  } while (iVar3 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
+
+----- FUNCTION _rotateVertex @ 0047bbcc -----
+
+undefined8 _rotateVertex(float *param_1,float *param_2,float *param_3,int *param_4)
+
+{
+  float *pfVar1;
+  float *pfVar2;
+  int iVar3;
+  int iVar4;
+  float *pfVar5;
+  float fVar12;
+  float in_s8;
+  float in_s9;
+  float in_s10;
+  float in_s12;
+  float in_s13;
+  float in_s14;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  float *pfVar6;
+  float *pfVar7;
+  float *pfVar8;
+  float *pfVar9;
+  float *pfVar10;
+  float *pfVar11;
+  
+  iVar3 = *param_4;
+  param_4 = param_4 + 1;
+  pfVar1 = param_1;
+  pfVar2 = param_2;
+  do {
+    fVar13 = *param_3;
+    fVar14 = param_3[4];
+    fVar15 = param_3[8];
+    param_3 = param_3 + 0x10;
+    iVar4 = *param_4;
+    param_4 = param_4 + 1;
+    while (1 < iVar4) {
+      param_4 = param_4 + 2;
+      fVar12 = *pfVar1;
+      pfVar5 = pfVar1 + 1;
+      pfVar6 = pfVar1 + 2;
+      pfVar7 = pfVar1 + 3;
+      pfVar8 = pfVar1 + 4;
+      pfVar9 = pfVar1 + 5;
+      pfVar10 = pfVar1 + 6;
+      pfVar11 = pfVar1 + 7;
+      pfVar1 = pfVar1 + 8;
+      in_s8 = ((in_s8 - in_s8) + fVar13 * fVar12 + fVar14 * *pfVar5 + fVar15 * *pfVar6) * *pfVar7;
+      in_s12 = ((in_s12 - in_s12) + fVar13 * *pfVar8 + fVar14 * *pfVar9 + fVar15 * *pfVar10) *
+               *pfVar11;
+      *pfVar2 = in_s8;
+      pfVar2[1] = in_s9;
+      pfVar2[2] = in_s10;
+      pfVar2[3] = in_s12;
+      pfVar2[4] = in_s13;
+      pfVar2[5] = in_s14;
+      pfVar2 = pfVar2 + 6;
+      iVar4 = iVar4 + -2;
+    }
+    if (iVar4 + -2 == -1) {
+      param_4 = param_4 + 1;
+      fVar12 = *pfVar1;
+      pfVar5 = pfVar1 + 1;
+      pfVar6 = pfVar1 + 2;
+      pfVar7 = pfVar1 + 3;
+      pfVar1 = pfVar1 + 4;
+      in_s8 = ((in_s8 - in_s8) + fVar13 * fVar12 + fVar14 * *pfVar5 + fVar15 * *pfVar6) * *pfVar7;
+      *pfVar2 = in_s8;
+      pfVar2[1] = in_s9;
+      pfVar2[2] = in_s10;
+      pfVar2 = pfVar2 + 3;
+    }
+    iVar3 = iVar3 + -1;
+  } while (iVar3 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
+
+----- FUNCTION _addVertex @ 0047bc84 -----
+
+undefined8 _addVertex(float *param_1,int param_2,int *param_3)
+
+{
+  int *piVar1;
+  float *pfVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  float *pfVar6;
+  float *pfVar7;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  float fVar11;
+  float fVar12;
+  float fVar13;
+  
+  iVar3 = *param_3;
+  param_3 = param_3 + 1;
+  pfVar2 = param_1;
+  do {
+    iVar4 = *param_3;
+    param_3 = param_3 + 1;
+    while (1 < iVar4) {
+      fVar8 = *pfVar2;
+      fVar9 = pfVar2[1];
+      fVar10 = pfVar2[2];
+      fVar11 = pfVar2[3];
+      fVar12 = pfVar2[4];
+      fVar13 = pfVar2[5];
+      pfVar2 = pfVar2 + 6;
+      iVar5 = *param_3;
+      piVar1 = param_3 + 1;
+      param_3 = param_3 + 2;
+      pfVar6 = (float *)(iVar5 + param_2);
+      pfVar7 = (float *)(*piVar1 + param_2);
+      *pfVar6 = fVar8 + *pfVar6;
+      pfVar6[1] = fVar9;
+      pfVar6[2] = fVar10;
+      *pfVar7 = fVar11 + *pfVar7;
+      pfVar7[1] = fVar12;
+      pfVar7[2] = fVar13;
+      iVar4 = iVar4 + -2;
+    }
+    if (iVar4 + -2 == -1) {
+      fVar8 = *pfVar2;
+      fVar9 = pfVar2[1];
+      fVar10 = pfVar2[2];
+      pfVar2 = pfVar2 + 3;
+      iVar4 = *param_3;
+      param_3 = param_3 + 1;
+      pfVar6 = (float *)(iVar4 + param_2);
+      *pfVar6 = fVar8 + *pfVar6;
+      pfVar6[1] = fVar9;
+      pfVar6[2] = fVar10;
+    }
+    iVar3 = iVar3 + -1;
+  } while (iVar3 != 0);
+  return CONCAT44(param_2,param_1);
+}
+
+
