@@ -1,57 +1,93 @@
-# Jurassic Park Builder — poking at the old asset format
+# Jurassic Park Builder — reverse engineering the dino assets
 
-Jurassic Park Builder (the Ludia mobile game, not the movie) shut its servers down back in 2020. I run a private server for it as a side project, and at some point I got curious about how the actual 3D dino assets are packed — turns out the format is completely proprietary (Ludia's own "AG" engine), and as far as I can tell nobody's documented it anywhere. So I've been picking it apart in my free time. This repo is my notes, scripts and Ghidra output so far, not a finished tool.
+Jurassic Park Builder (the Ludia mobile game, not the movie) shut its servers down back in 2020. I run a private server for it as a side project, and at some point I got curious about how the actual 3D dino assets are packed — the format is completely proprietary (Ludia's own "AG" engine) and as far as I can tell nobody has documented it. This repo is the notes, scripts and Ghidra output from picking it apart.
 
-Short version of where things stand: the static mesh/skinning format (`.dab` files) is basically cracked — I can go from raw bytes to an actual recognizable 3D point cloud of a dinosaur leg. The animation format (`.dsb`) is maybe half-figured-out. And I'm currently stuck trying to capture the runtime bone matrices with Frida because BlueStacks' ARM translation layer (Houdini) hides the target library from Frida's module enumeration.
+## Where things stand
 
-I'm **not** including the actual game asset files (`.dab`/`.dsb`/`.dhr`, the APK) in this repo since that's Ludia's IP, not mine — just the scripts and the stuff I derived from them.
+The hard part is done: I can take a creature that is running in the game and end up with a **rigged, animated, textured model** (`.glb` / `.blend`) whose skinning reproduces the game's own vertex positions exactly.
 
-## Setup, if you want to poke at this too
+- **Mesh, skinning and animation: solved.** Exact format of the mesh chunk, the bone/weight data and the skinning formula (below). Verified against live game memory: recomputing the skinning from rest positions + weights + bone matrices matches the game's own output vertices with 0.0000 error.
+- **UVs and textures: solved.** Every creature is drawn from a shared skin atlas; a texture-matrix uniform picks its tile.
+- **Done so far:** Triceratops and Carnotaurus (`export/`). The same pipeline should work for the rest; aquatic and arctic/mammal families are the next targets.
+- **Still open:** the `.dsb` on-disk animation format (I capture the animation from the running game instead, so it stopped being blocking, but the format is still undecoded), higher-resolution textures (the game only has 128×128 tiles), and other creature families.
 
-- Get the APK (`libJurassicPark.so` inside `lib/armeabi-v7a/` is NOT stripped of C++ symbols, which is the only reason any of this was feasible)
-- Ghidra 12.1.3 + JDK 21 (Ghidra 12 refuses to run on JDK 17, wastes an hour figuring that out)
-- Python 3 with numpy/matplotlib for the parsing/render scripts
+What's in `export/<creature>/`: `*_animated.glb` (skinned mesh + skeleton + 240-frame animation + texture), `*_rigged.blend`, `*_rest.obj` (rest pose with UVs/normals), `*_rig.json` (raw weights/matrices per frame), the texture tile and a render. These are models and textures reconstructed from the game, so they are Ludia's IP too — they are here for research/preservation. The original game files (`.dab`/`.dsb`/`.dhr`, the APK), raw memory dumps and the full texture atlases are **not** in the repo (`capture/` is git-ignored).
 
-## `mesh/` — the .dab format (solved, more or less)
+## The format, in short
 
-Each dinosaur has a bunch of `.dab` mesh chunks (one per body part / limb). Byte layout, worked out mostly by cross-referencing statistical guesses against the actual decompiled skinning code:
+Everything below was verified on live data (both creatures).
 
-- a per-bone list of vertex/face-corner indices (confirmed via edge-length coherence testing against a random baseline — real triangles come out way shorter than random ones)
-- a flat array of vertex positions (plain 12-byte float triples, no header — but the *start offset* of this array isn't fixed, you have to detect it)
-- a triangle-strip index buffer
-- per-vertex normals
+**Skinning.** Each bone has a runtime record of `0xA4` bytes at `*(sceneNode+0x88) + boneId*0xA4`. Two 4×4 float matrices matter: `+0x08` is constant (mesh→bone space, i.e. inverse bind) and `+0x64` is animated every frame (bone→world). Matrices are row-vector style (`x' = x*m[0] + y*m[4] + z*m[8] + m[12]`). A vertex is
 
-`content_sniffer.py` is the thing that actually makes this generalize across files — it scans a byte range and classifies it (index buffer vs float positions vs [0,1]-bounded scalars) instead of hardcoding offsets, because every file has these sections in a slightly different order/size.
+```
+v_out = Σ_g  w_g · Palette_g( Static_g( p_rest ) )
+```
 
-`render_mesh_v3.py` / `render_parts_469.py` turn a raw `.dab` chunk into a wireframe you can actually look at. `export_obj.py` dumps everything to a combined `.obj`.
+with at most 3 influences per vertex and weights summing to exactly 1. The game does this on the CPU (there are no skinning shaders); each skinned mesh keeps its final positions/normals as `vec3` arrays that it rewrites every frame.
 
-The image in `renders/` is all 6 usable mesh chunks of one dino (brachiosaurus) plotted together, each in its own local bind-pose space — you can see 5 of them are clearly the same leg shape reused for both front/back legs, and the 6th (green) is a full side-on body silhouette. They don't line up into an assembled dinosaur because each part's world position comes from a bone matrix that isn't stored in this file at all — see the Frida section below for why that matters.
+**Mesh chunk** (`.dab`; offsets relative to the chunk start, header words `w[i]` are little-endian u32; "self-relative" means value + address of the field itself):
 
-Also decompiled the actual runtime matrix-apply code (`ghidra/findings/matrix_funcs.txt`), which is a pretty standard affine transform, and traced where the live bone matrix lives in memory: `*(sceneNode+0x88) + boneId*0xA4 + 8`, 64 bytes, column-major 4x4. That's the number I'm trying to actually read out of a running instance of the game.
+| what | where |
+|---|---|
+| `w[0]` bone groups, `w[1]` render vertices, `w[3]` skin (unique) vertices, `w[4]` (group, vertex) influence pairs | header |
+| `u16` bone id per group | `w[26]` + `0x68` (self-relative) |
+| `u16` vertex count per group (sums to `w[4]`) | `w[27]` + `0x6c` |
+| `f32×3` rest positions, `w[3]` of them | `w[28]` + `0x70` |
+| `u16` render→skin vertex remap, `w[1]` entries (render vertices are duplicated across UV/normal seams) | `w[29]` + `0x74` |
+| `u16` skin vertex index per influence pair, `w[4]` entries | `w[30]` + `0x78` |
+| `f32` weight per influence pair, `w[4]` entries | `w[31]` + `0x7c` |
 
-## `animation/` — the .dsb format (partial)
+**Not inside the mesh chunk:**
+- The **triangle list** is a separate `u16` chunk (`GL_TRIANGLES`, indices into the *render* vertices) that sits just before the mesh chunk, ending ~8 bytes before it.
+- The **interleaved GL vertex buffer** lives elsewhere in the same `.dab`: 36 bytes per render vertex = `pos f32×3, normal f32×3, color u32 (0xFFFFFFFF), u f32, v f32`.
+- Game V runs top-down; flip it (`1 − v`) for Blender/glTF.
 
-This is where the animation/keyframe data presumably lives, since it's the only file type left that isn't mesh or the chunk index. Found a repeating 56-byte record block and pulled apart which fields are per-track constants vs per-key variables vs some kind of repeating phase marker, all documented inline as I went (see `explore_dsb.py` through `explore_dsb7.py`, numbered roughly in the order I actually ran them, including the wrong turns).
+**Textures.** Creatures don't carry their own texture. They are drawn from one shared RGBA8 skin atlas per family (1024² for the Triceratops, 2048² for the Carnotaurus). A texture-matrix uniform (`glUniformMatrix4fv`, location 3) is sent before each draw: `u' = scale·u + tx`, `v' = scale·v + ty`, which selects a 128×128 tile. Mesh UVs stay 0..1 inside the tile.
 
-Recovered real type names for the compressed keyframe formats by grepping function names in the binary instead of guessing (`ghidra/findings/trackdata_funcs.txt`) — there's `stVec3HF`/`stQuatHF` (half-float variants), and weirdly two *different* compressed quaternion schemes (`stQuatTB` and `stQuat3`). But I never found the actual function that reads these bytes — every lead traced back to compiler-generated `std::function` glue with zero real logic in it (`ghidra/findings/vec3hf_manager.txt`, `real_parser_bodies.txt` is literally an empty search result). My best guess is the real deserializer got fully inlined somewhere and there's no symbol left to find it by name. Haven't cracked the actual position/rotation values yet.
+**Packages.** `cache_android` has three families: `su*` (surface dinos), `aq*` (aquatic) and `ar*` (arctic/mammals), each with a `*battledino_*` variant. **Package names can be misleading** — the baby Carnotaurus lives in `sudino_spinosa.dab` and there is no carnotaurus package — so always identify a creature from the capture, not the file name.
 
-## `ghidra/` — the actual RE work
+## How a creature is extracted
 
-Java scripts I ran headless against the `.so` (`analyzeHeadless.bat ... -postScript X.java`). A few notes on what worked and what didn't, because I wasted a lot of time on the didn't:
+Needs a **real ARM device** (I use an Android 15 tablet; the game is armeabi-v7a, no root needed) and a private server for the game to talk to.
 
-- Searching by C++ class name / RTTI / mangled symbol substrings for `AGSkin`, `AGMesh`, `AGPackage` etc: dead end, every time, zero hits (`ListRttiSymbols.java`). These classes just don't have discoverable RTTI in this binary.
-- What actually works: find a literal string the code must reference (a file extension, a magic tag), get real xrefs to it, decompile from there. Or, when xrefs come up empty: list every function near a known one in address space and decompile the neighbors directly — compilers keep translation units contiguous, and this is literally how I found the real skinning loop (`FindNeonFuncs.java` → `ListFuncsNear.java` → found `FUN_0047b62c`, the actual per-bone skin loop, sitting right next to the leaf transform functions I already knew about).
+1. **Patch the APK** with frida-gadget in *script* mode (not listen mode — listen mode hung on launch):
+   ```
+   objection patchapk --source <apk> --architecture armeabi-v7a --gadget-version 16.1.11 \
+       --script-source frida/hook_loader.js --gadget-config gadget.json --enable-debug
+   ```
+   with `gadget.json` = `{"interaction": {"type": "script", "path": "libfrida-gadget.script.so", "on_change": "ignore"}}`. Gadget 17.x crashed on launch here; 16.1.11 is fine. Android 15 refuses `targetSdk < 23` installs, so install with `pm install --bypass-low-target-sdk-block -r`. `--enable-debug` is what lets `adb shell run-as` read files back out of the app's data dir.
+2. **`frida/hook_loader.js`** runs whatever you drop in the app's `dyn.js` (checked every 2 s), so experiments take seconds instead of a re-patch. `frida/run_snippet.sh` pushes a snippet and prints the log.
+3. **Capture** with the creature on screen: `snippets/30_grab_all.js` (find the skinned objects) → `snippets/31_sample_generic.js` (dump the mesh resource + ~8 s of animation and print the draw descriptor). Pull the files with `adb exec-out run-as … cat` (plain `adb shell` mangles binaries).
+4. **Texture:** start the game fresh, then `snippets/40_gl_capture_generic.js` (set `PRIMS` to the creature's triangle count) to dump the atlas uploads and log the texture matrix at the creature's draw call. GL texture ids are renumbered between runs — only trust the id logged in the same run.
+5. **Build:** `python pipeline/build_creature.py <name> <capture_dir> <cache_dir> <idx_count>` parses the capture generically, finds the source `.dab`, the vertex buffer and the triangle list, and refuses to continue if any consistency check fails (weights sum to 1, the formula reproduces the live vertices, no degenerate triangles).
+6. **Blender:** `blender -b --python blender/import_tricera.py -- <name>_rig.json out.blend out.glb tile.png render.png` (the name is historical, it is generic) builds armature, vertex groups, keyframed animation, UV/material, verifies the deformation, and exports. Tested with Blender 5.1; worst deformation error against the reference was 0.026 (Triceratops) and 0.13 (Carnotaurus) units on models that are 90–175 units across — the Carnotaurus figure is not fully explained yet (probably slight scale/shear in some bone matrices that Blender's edit-bone orthonormalization drops).
 
-## `frida/` — where I'm currently stuck
+## Layout
 
-Got frida-gadget injected into the APK fine (`objection patchapk`), confirmed it's alive on the device, can attach and run scripts. The problem: `Process.enumerateModules()` never lists `libJurassicPark.so`, ever — only ever shows the 6 earliest bootstrap libs (see `bone_matrix_dump_failed_capture.json`, that's a real capture attempt, it just never sees the target lib load). Logcat proves the library is loaded and running in the same process, so it's there, Frida just can't see it.
+- `pipeline/` — builds a rig dataset from a capture, with checks.
+- `blender/` — rig/animation/texture builder and glTF export.
+- `frida/` — loader, snippets (`snippets/`), and the earlier probes/experiments (kept for reference).
+- `ghidra/` — headless scripts and their output in `findings/`.
+- `mesh/`, `animation/`, `renders/` — the earlier, purely static work on `.dab`/`.dsb` files. `mesh/` is superseded by `pipeline/` (it relied on heuristics to guess section boundaries, and some of its conclusions turned out wrong, e.g. it treated the per-bone influence lists as face lists).
+- `export/` — per-creature results. `capture/` — raw dumps (not tracked).
 
-The instance I'm testing on is BlueStacks running the game (armeabi-v7a) through Houdini, since the host is x86_64 with no real ARM core. My read on this is Houdini manages translated code outside the normal linker bookkeeping Frida walks, so it stays invisible to enumeration no matter how long you wait. Tried forcing `Module.load()` as a workaround — just crashes the process.
+## Tooling notes (things that cost me time)
 
-If anyone's actually solved this specific problem (Frida + Houdini-translated ARM lib on an x86 BlueStacks host) I'd genuinely like to know, that's the main reason this is public now instead of just sitting on my drive.
+- **Ghidra addresses are `0x10000` too high.** Ghidra imports this ARM `.so` with image base `0x10000`, so the runtime address is `module.base + (ghidraAddr − 0x10000)`. I lost a lot of time hooking the wrong places before finding this. (It also means an earlier conclusion of mine that the game has an anti-tamper check that disconnects on any hook was wrong — that was just hooks in the wrong place. Hooks inside the `.so` are fine, even at hundreds of thousands of calls per second.)
+- **Thumb vs ARM.** Frida needs `addr | 1` for Thumb functions and the plain address for ARM ones; guessing wrong corrupts the function and crashes the game. `ghidra/ListFuncsMode.java` reads the real mode per function (almost everything is Thumb-2; the small `_transformVertex`/`_rotateVertex`/`_addVertex` leaf functions are ARM).
+- **Ghidra headless is slow to start.** Import and analyze once into a persistent project (`-import`), then run scripts with `-process libJurassicPark.so -noanalysis -readOnly -postScript …` — about 9 s per query instead of ~3 minutes.
+- **Zero xrefs usually means a virtual method.** Scan the binary's data for the function's address as a raw 4-byte word (`ghidra/FindFuncPtrRefs2.java`) to find the vtable, then dump the words around it (`DumpVtables.java`) — the C++ RTTI names are right there, even though Ghidra's own RTTI analysis finds nothing (this is how I got `AndroidVertexBufferDynamicImpl`, `GlEsRenderer`, …). Constructors then show up as normal references to the vtable address.
+- **Imported GL symbols look uncalled.** Headless import doesn't link external symbols, so `getCallingFunctions()` on `glDrawElements` etc. returns nothing. Look up the relocation table (`FindRelocRefs.java`) to find the real local PLT trampolines, or just hook `libGLESv2.so`'s exports from Frida.
+- **PIC globals.** Decompiled code shows globals as `DAT_xxx + immediate`; to get the real address, list the instructions after a known call (`ListInstrRefs.java`) and read the resolved reference off the load/store.
+- Literal strings are still the best way in when nothing else works (`FindStringXrefs.java`); the game has profiler labels like `"THREADED SKINNING - MAIN"` (a dead end for finding the skinning code, but they tell you what exists).
+- Setup: Ghidra 12.1.3 + JDK 21 (Ghidra 12 refuses JDK 17), Python 3 with numpy/Pillow/matplotlib, Blender 5.1. `libJurassicPark.so` in the APK is not stripped of C++ symbols, which is the only reason any of this was feasible.
 
-## what I still don't know
+## `.dsb` (partial, on hold)
 
-- exact byte layout of a `.dsb` keyframe record (compressed pos/rot values)
-- how to get Frida to see a Houdini-translated library, or whether that's even possible on this BlueStacks build
-- whether there's a real ARM device path that doesn't need root (I have access to one but it's not mine, so nothing persistent/risky on it)
+Found a repeating 56-byte record block and worked out which fields are per-track constants vs per-key variables (`animation/explore_dsb*.py`, numbered in the order I ran them, wrong turns included). The binary names the compressed keyframe types (`stVec3HF`/`stQuatHF` half-float variants, and two different compressed quaternion schemes, `stQuatTB` and `stQuat3`; see `ghidra/findings/trackdata_funcs.txt`) but I never found the function that actually reads them. Since the animation can be captured from the running game, this isn't blocking anymore, but decoding it would allow exporting animations without the game running.
+
+## What's next
+
+- Aquatic (`aq*`) and arctic/mammal (`ar*`) creatures, and more surface dinos — they need to be unlocked in the game first, and may use different classes, atlases or draw modes.
+- Working out the residual Blender deformation error.
+- Decoding `.dsb`.
