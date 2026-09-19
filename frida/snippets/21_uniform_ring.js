@@ -1,0 +1,20 @@
+const mod = Process.findModuleByName("libJurassicPark.so");
+const gl = n => Module.findExportByName("libGLESv2.so", n);
+const ring = []; const push = s => { ring.push(s); if (ring.length > 60) ring.shift(); };
+const rf = (p, n) => { const o = []; try { for (let i = 0; i < n; i++) o.push(+p.add(i * 4).readFloat().toFixed(4)); } catch (e) {} return o; };
+[["glUniform1f", a => [a[1].toFloat ? 0 : 0]], ].length;
+Interceptor.attach(gl("glUniform4fv"), { onEnter(a) { push("4fv loc=" + a[0].toInt32() + " n=" + a[1].toInt32() + " " + JSON.stringify(rf(a[2], 4 * Math.min(a[1].toInt32(), 2)))); } });
+Interceptor.attach(gl("glUniform3fv"), { onEnter(a) { push("3fv loc=" + a[0].toInt32() + " n=" + a[1].toInt32() + " " + JSON.stringify(rf(a[2], 3))); } });
+Interceptor.attach(gl("glUniform2fv"), { onEnter(a) { push("2fv loc=" + a[0].toInt32() + " n=" + a[1].toInt32() + " " + JSON.stringify(rf(a[2], 2))); } });
+Interceptor.attach(gl("glUniform1fv"), { onEnter(a) { push("1fv loc=" + a[0].toInt32() + " n=" + a[1].toInt32() + " " + JSON.stringify(rf(a[2], 1))); } });
+Interceptor.attach(gl("glUniformMatrix4fv"), { onEnter(a) { push("M4 loc=" + a[0].toInt32() + " n=" + a[1].toInt32() + " tr=" + a[2].toInt32() + " row3=" + JSON.stringify(rf(a[3].add(48), 4))); } });
+Interceptor.attach(gl("glUseProgram"), { onEnter(a) { push("USEPROGRAM " + a[0].toInt32()); } });
+let done = 0;
+Interceptor.attach(mod.base.add(0x309fc4 - 0x10000).add(1), { onEnter(a) {
+  if (done >= 2) return;
+  const inner = a[1].add(4).readU32(); if (!inner) return;
+  if (ptr(inner).add(0x1c).readU32() !== 482) return;
+  done++; log("=== DINO DRAW #" + done + ": last " + ring.length + " GL uniform calls before it ===");
+  ring.slice(-40).forEach(s => log("  " + s));
+} });
+log("uniform ring hooks installed");

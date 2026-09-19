@@ -1,0 +1,3 @@
+=== target 0x309fc4 (plain) / 0x309fc5 (thumb) ===
+  hit in block=.data.rel.ro at 005a101c value=0x309fc5
+  total hits: 1

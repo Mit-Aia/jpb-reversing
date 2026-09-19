@@ -1,0 +1,56 @@
+=== callers of FUN_0047b2e0 @ 0047b2e0 ===
+  ref from 0047b24e in func FUN_0047b1ac@0047b1ac type=UNCONDITIONAL_CALL
+  total: 1
+=== callers of FUN_0047b2a8 @ 0047b2a8 ===
+  total: 0
+=== callers of FUN_0047b354 @ 0047b354 ===
+  ref from 0047b21a in func FUN_0047b1ac@0047b1ac type=UNCONDITIONAL_CALL
+  total: 1
+=== callers of FUN_0047b31c @ 0047b31c ===
+  total: 0
+=== callers of FUN_0047bfb4 @ 0047bfb4 ===
+  ref from 0047c050 (no func) type=UNCONDITIONAL_CALL
+  total: 1
+=== callers of FUN_0047c060 @ 0047c060 ===
+  ref from 0047b1e0 in func FUN_0047b1ac@0047b1ac type=UNCONDITIONAL_CALL
+  ref from 0047b234 in func FUN_0047b1ac@0047b1ac type=UNCONDITIONAL_CALL
+  total: 2
+
+----- FUNCTION FUN_0047b1ac @ 0047b1ac -----
+
+int * FUN_0047b1ac(int *param_1,undefined4 param_2,undefined4 param_3)
+
+{
+  int iVar1;
+  uint uVar2;
+  void *pvVar3;
+  
+  *param_1 = DAT_0047b278 + 0x47b1be;
+  param_1[1] = 0;
+  iVar1 = FUN_00492b78();
+  uVar2 = FUN_00492b98();
+  if (iVar1 != 1) {
+    pvVar3 = operator_new(0x40);
+    FUN_0047c060(pvVar3,param_2,param_3);
+    param_1[1] = (int)pvVar3;
+    return param_1;
+  }
+  if ((uVar2 & 4) == 0) {
+    if ((uVar2 & 2) != 0) {
+      pvVar3 = operator_new(0x3c);
+      FUN_0047b354(pvVar3,param_2,param_3);
+      param_1[1] = (int)pvVar3;
+      return param_1;
+    }
+    pvVar3 = operator_new(0x40);
+    FUN_0047c060(pvVar3,param_2,param_3);
+    param_1[1] = (int)pvVar3;
+    return param_1;
+  }
+  pvVar3 = operator_new(0x3c);
+  FUN_0047b2e0(pvVar3,param_2,param_3);
+  param_1[1] = (int)pvVar3;
+  return param_1;
+}
+
+

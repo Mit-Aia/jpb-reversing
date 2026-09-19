@@ -1,0 +1,4 @@
+0047b62c: push {r4,r5,r6,r7,r8,r9,r10,r11,lr}
+0047b630: sub sp,#0x54
+0047b632: str r0,[sp,#0x24]
+    -> Stack[-0x54] type=WRITE

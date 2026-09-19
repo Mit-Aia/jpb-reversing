@@ -1,0 +1,63 @@
+
+----- FUNCTION FUN_0031a874 @ 0031a874 -----
+
+void FUN_0031a874(int param_1,int param_2)
+
+{
+  if (param_2 == 0) {
+    FUN_00320a88(*(undefined4 *)(DAT_0031a894 + 0x31a880),*(undefined4 *)(param_1 + 0x28),1);
+    return;
+  }
+  FUN_00320a88(*(undefined4 *)(DAT_0031a898 + 0x31a88e),*(undefined4 *)(param_1 + 0x28),param_2);
+  return;
+}
+
+
+
+----- FUNCTION FUN_0031a89c @ 0031a89c -----
+
+void FUN_0031a89c(int param_1,int param_2)
+
+{
+  if (param_2 == 0) {
+    FUN_00320a88(*(undefined4 *)(DAT_0031a8bc + 0x31a8a8),*(undefined4 *)(param_1 + 0x2c),1);
+    return;
+  }
+  FUN_00320a88(*(undefined4 *)(DAT_0031a8c0 + 0x31a8b6),*(undefined4 *)(param_1 + 0x2c),param_2);
+  return;
+}
+
+
+
+----- FUNCTION FUN_0031a6a0 @ 0031a6a0 -----
+
+void FUN_0031a6a0(float *param_1,float param_2)
+
+{
+  float fVar1;
+  uint in_fpscr;
+  float fVar2;
+  
+  fVar1 = DAT_0031a6c4;
+  param_1[2] = param_2;
+  fVar2 = (float)VectorUnsignedToFloat(param_2,(byte)(in_fpscr >> 0x16) & 3);
+  *param_1 = fVar2 * fVar1 + *param_1 * DAT_0031a6c8;
+  return;
+}
+
+
+
+----- FUNCTION FUN_0031a6f4 @ 0031a6f4 -----
+
+void FUN_0031a6f4(int param_1,undefined4 param_2)
+
+{
+  uint in_fpscr;
+  float fVar1;
+  
+  fVar1 = (float)VectorUnsignedToFloat(param_2,(byte)(in_fpscr >> 0x16) & 3);
+  *(float *)(param_1 + 4) = fVar1 * DAT_0031a71c + *(float *)(param_1 + 4) * DAT_0031a718;
+  return;
+}
+
+

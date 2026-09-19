@@ -1,0 +1,95 @@
+=== searching for string: "UP. BONES" (9 bytes) ===
+  found at 00539698 in block .rodata
+    ref from 0031a462 in func FUN_0031a1f4@0031a1f4 type=PARAM
+    (xrefs to 00539698): 1
+=== searching for string: "APP. BONE INFL." (15 bytes) ===
+  found at 005396a4 in block .rodata
+    ref from 0031a492 in func FUN_0031a1f4@0031a1f4 type=PARAM
+    (xrefs to 005396a4): 1
+=== searching for string: "SKINNING" (8 bytes) ===
+  found at 005396e4 in block .rodata
+  found at 005396f9 in block .rodata
+  found at 00539715 in block .rodata
+    ref from 0031a52e in func FUN_0031a1f4@0031a1f4 type=PARAM
+    (xrefs to 005396e4): 1
+    (xrefs to 005396f9): 0
+    (xrefs to 00539715): 0
+=== searching for string: "THREADED SKINNING - MAIN" (24 bytes) ===
+  found at 005396f0 in block .rodata
+    ref from 0031a5ae in func FUN_0031a1f4@0031a1f4 type=PARAM
+    (xrefs to 005396f0): 1
+=== searching for string: "THREADED SKINNING - THREAD" (26 bytes) ===
+  found at 0053970c in block .rodata
+    ref from 0031a5e0 in func FUN_0031a1f4@0031a1f4 type=PARAM
+    (xrefs to 0053970c): 1
+
+----- FUNCTION FUN_0031a1f4 @ 0031a1f4 -----
+
+undefined4 * FUN_0031a1f4(undefined4 *param_1)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 *puVar5;
+  undefined4 uVar6;
+  
+  uVar4 = DAT_0031a550;
+  *param_1 = 0x41800000;
+  param_1[1] = uVar4;
+  uVar1 = DAT_0031a554;
+  puVar5 = (undefined4 *)(DAT_0031a558 + 0x31a23c);
+  param_1[2] = 0;
+  iVar2 = DAT_0031a55c;
+  uVar3 = *puVar5;
+  param_1[3] = 0;
+  uVar3 = FUN_00320c3c(uVar3,iVar2 + 0x31a256,0,1,1,1,0x3f800000,uVar4,uVar4,uVar4);
+  param_1[4] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a560 + 0x31a286,0,1,1,1,uVar4,0x3f800000,0x3f800000,uVar4);
+  param_1[5] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a564 + 0x31a2b6,0,1,1,1,uVar4,0x3f800000,uVar4,uVar4);
+  param_1[6] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a568 + 0x31a2e6,0,0,0,1,uVar4,uVar4,0x3f800000,uVar4);
+  param_1[7] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a56c + 0x31a316,0,0,0,1,uVar4,uVar1,0x3f800000,uVar4);
+  param_1[8] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a570 + 0x31a346,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[9] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a574 + 0x31a376,0,0,1,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[10] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a578 + 0x31a3a6,0,0,1,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0xb] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a57c + 0x31a3d6,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0xc] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a580 + 0x31a406,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0xd] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a584 + 0x31a436,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0xe] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a588 + 0x31a466,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0xf] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a58c + 0x31a496,0,0,0,0,0x3f800000,0x3f800000,0x3f800000,
+                       uVar4);
+  param_1[0x10] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a590 + 0x31a4cc,0,0,0,0,0x3f800000,0x3f19999a,uVar4,uVar4);
+  param_1[0x11] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a594 + 0x31a502,0,0,0,0,0x3f800000,0x3f333333,uVar4,uVar4);
+  param_1[0x12] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a598 + 0x31a532,0,0,1,1,0x3f800000,uVar1,uVar1,uVar4);
+  param_1[0x13] = uVar3;
+  uVar3 = FUN_00320c3c(*puVar5,DAT_0031a5f8 + 0x31a5b2,0,0,1,1,0x3f800000,uVar1,uVar1,uVar4);
+  uVar6 = *puVar5;
+  param_1[0x14] = uVar3;
+  uVar4 = FUN_00320c3c(uVar6,DAT_0031a5fc + 0x31a5e4,0,0,1,1,0x3f800000,uVar1,uVar1,uVar4);
+  param_1[0x15] = uVar4;
+  return param_1;
+}
+
+

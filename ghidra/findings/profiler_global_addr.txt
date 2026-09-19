@@ -1,0 +1,32 @@
+002f79f8: add r3,pc
+002f79fa: str r5,[r3,#0x0]
+    -> 0064f594 type=WRITE
+002f79fc: blx 0x0041a1b8
+    -> 0041a1b8 type=UNCONDITIONAL_CALL
+002f7a00: mov r5,r0
+002f7a02: bl 0x0031a1f4
+    -> 0031a1f4 type=UNCONDITIONAL_CALL
+002f7a06: ldr r3,[0x002f7d54]
+    -> 002f7d54 type=READ
+002f7a08: mov.w r0,#0x198
+002f7a0c: add r3,pc
+002f7a0e: str r5,[r3,#0x0]
+    -> 0064f598 type=WRITE
+002f7a10: blx 0x0041a1b8
+    -> 0041a1b8 type=UNCONDITIONAL_CALL
+002f7a14: mov r5,r0
+002f7a16: bl 0x00305340
+    -> 00305340 type=UNCONDITIONAL_CALL
+002f7a1a: ldr r3,[0x002f7d58]
+    -> 002f7d58 type=READ
+002f7a1c: movs r0,#0x2c
+002f7a1e: add r3,pc
+002f7a20: str r5,[r3,#0x0]
+    -> 0064e570 type=WRITE
+002f7a22: blx 0x0041a1b8
+    -> 0041a1b8 type=UNCONDITIONAL_CALL
+002f7a26: mov r5,r0
+002f7a28: bl 0x0030660c
+    -> 0030660c type=UNCONDITIONAL_CALL
+002f7a2c: ldr r3,[0x002f7d5c]
+    -> 002f7d5c type=READ

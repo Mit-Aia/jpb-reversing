@@ -1,0 +1,6 @@
+0031a874: cbnz r1,0x0031a884
+    -> 0031a884 type=CONDITIONAL_JUMP
+0031a876: ldr r3,[0x0031a894]
+    -> 0031a894 type=READ
+0031a878: movs r2,#0x1
+0031a87a: ldr r1,[r0,#0x28]

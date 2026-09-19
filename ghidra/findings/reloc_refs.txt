@@ -1,0 +1,129 @@
+total relocations in table: 27955
+matched symbols: 9 / 10
+=== glUniformMatrix4fv reloc @ 005afd18 ===
+  ref from 000b2540 in func glUniformMatrix4fv@000b2538 type=READ
+  total: 1
+=== glUniformMatrix3fv: no relocation entry found ===
+=== glUniform4fv reloc @ 005afd20 ===
+  ref from 000b2558 in func glUniform4fv@000b2550 type=READ
+  total: 1
+=== glUniform3fv reloc @ 005afd24 ===
+  ref from 000b2564 in func glUniform3fv@000b255c type=READ
+  total: 1
+=== glVertexAttribPointer reloc @ 005afcdc ===
+  ref from 000b248c in func glVertexAttribPointer@000b2484 type=READ
+  total: 1
+=== glDrawElements reloc @ 005afcf0 ===
+  ref from 000b24c8 in func glDrawElements@000b24c0 type=READ
+  total: 1
+=== glDrawArrays reloc @ 005afce0 ===
+  ref from 000b2498 in func glDrawArrays@000b2490 type=READ
+  total: 1
+=== glUseProgram reloc @ 005afcb8 ===
+  ref from 000b2420 in func glUseProgram@000b2418 type=READ
+  total: 1
+=== glUniform1i reloc @ 005afd14 ===
+  ref from 000b2534 in func glUniform1i@000b252c type=READ
+  total: 1
+=== glGetUniformLocation reloc @ 005afd58 ===
+  ref from 000b2600 in func glGetUniformLocation@000b25f8 type=READ
+  total: 1
+
+----- FUNCTION glUniformMatrix4fv @ 000b2538 -----
+
+void glUniformMatrix4fv(void)
+
+{
+  (*(code *)PTR_glUniformMatrix4fv_005afd18)();
+  return;
+}
+
+
+
+----- FUNCTION glUniform4fv @ 000b2550 -----
+
+void glUniform4fv(void)
+
+{
+  (*(code *)PTR_glUniform4fv_005afd20)();
+  return;
+}
+
+
+
+----- FUNCTION glUniform3fv @ 000b255c -----
+
+void glUniform3fv(void)
+
+{
+  (*(code *)PTR_glUniform3fv_005afd24)();
+  return;
+}
+
+
+
+----- FUNCTION glVertexAttribPointer @ 000b2484 -----
+
+void glVertexAttribPointer(void)
+
+{
+  (*(code *)PTR_glVertexAttribPointer_005afcdc)();
+  return;
+}
+
+
+
+----- FUNCTION glDrawElements @ 000b24c0 -----
+
+void glDrawElements(void)
+
+{
+  (*(code *)PTR_glDrawElements_005afcf0)();
+  return;
+}
+
+
+
+----- FUNCTION glDrawArrays @ 000b2490 -----
+
+void glDrawArrays(void)
+
+{
+  (*(code *)PTR_glDrawArrays_005afce0)();
+  return;
+}
+
+
+
+----- FUNCTION glUseProgram @ 000b2418 -----
+
+void glUseProgram(void)
+
+{
+  (*(code *)PTR_glUseProgram_005afcb8)();
+  return;
+}
+
+
+
+----- FUNCTION glUniform1i @ 000b252c -----
+
+void glUniform1i(void)
+
+{
+  (*(code *)PTR_glUniform1i_005afd14)();
+  return;
+}
+
+
+
+----- FUNCTION glGetUniformLocation @ 000b25f8 -----
+
+void glGetUniformLocation(void)
+
+{
+  (*(code *)PTR_glGetUniformLocation_005afd58)();
+  return;
+}
+
+

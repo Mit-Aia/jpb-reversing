@@ -1,0 +1,21 @@
+=== symbol glUniformMatrix4fv @ EXTERNAL:0000007d (type=Function, func=<EXTERNAL>::glUniformMatrix4fv) ===
+  total callers: 0
+=== symbol glUniformMatrix3fv NOT FOUND (not imported / not used) ===
+=== symbol glUniformMatrix2fv NOT FOUND (not imported / not used) ===
+=== symbol glUniform4fv @ EXTERNAL:0000007f (type=Function, func=<EXTERNAL>::glUniform4fv) ===
+  total callers: 0
+=== symbol glUniform3fv @ EXTERNAL:00000080 (type=Function, func=<EXTERNAL>::glUniform3fv) ===
+  total callers: 0
+=== symbol glUniformMatrix4x3fv NOT FOUND (not imported / not used) ===
+=== symbol glVertexAttribPointer @ EXTERNAL:0000006e (type=Function, func=<EXTERNAL>::glVertexAttribPointer) ===
+  total callers: 0
+=== symbol glDrawElements @ EXTERNAL:00000073 (type=Function, func=<EXTERNAL>::glDrawElements) ===
+  total callers: 0
+=== symbol glDrawArrays @ EXTERNAL:0000006f (type=Function, func=<EXTERNAL>::glDrawArrays) ===
+  total callers: 0
+=== symbol glUseProgram @ EXTERNAL:00000065 (type=Function, func=<EXTERNAL>::glUseProgram) ===
+  total callers: 0
+=== symbol glUniform1i @ EXTERNAL:0000007c (type=Function, func=<EXTERNAL>::glUniform1i) ===
+  total callers: 0
+=== symbol glGetUniformLocation @ EXTERNAL:0000008d (type=Function, func=<EXTERNAL>::glGetUniformLocation) ===
+  total callers: 0

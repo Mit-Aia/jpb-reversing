@@ -1,0 +1,8 @@
+=== target 0x47b8b4 (plain) / 0x47b8b5 (thumb) ===
+  hit in block=.data.rel.ro at 005acb78 value=0x47b8b5
+  hit in block=.data.rel.ro at 005acbb0 value=0x47b8b5
+  hit in block=.data.rel.ro at 005acbe8 value=0x47b8b5
+  total hits: 3
+=== target 0x47c380 (plain) / 0x47c381 (thumb) ===
+  hit in block=.data.rel.ro at 005acc78 value=0x47c381
+  total hits: 1

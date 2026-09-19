@@ -1,0 +1,140 @@
+
+===== window around 0x5acb78 =====
+005acb38 : 0x00000000
+005acb3c : 0x005acb58
+005acb40 : 0x0047b0e1
+005acb44 : 0x0047b169
+005acb48 : 0x0047b121
+005acb4c : 0x0047b12d
+005acb50 : 0x0047b139
+005acb54 : 0x0047b145
+005acb58 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acb5c : 0x0058e1f0  -> STRING "30AndroidVertexBufferDynamicImpl"  -> SYM s_30AndroidVertexBufferDynamicImpl_0058e1f0  -> ascii-ish "30AndroidVertexBufferDyn"
+005acb60 : 0x005acb10  -> SYM DAT_005acb10
+005acb64 : 0x00000000
+005acb68 : 0x00000000
+005acb6c : 0x005acb94
+005acb70 : 0x0047b2a9  -> FUNC FUN_0047b2a8 @ 0047b2a8
+005acb74 : 0x0047b2c1
+005acb78 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4   <=== HIT
+005acb7c : 0x0047b281
+005acb80 : 0x0047b36d
+005acb84 : 0x0047b371
+005acb88 : 0x0047b285
+005acb8c : 0x0047b291
+005acb90 : 0x0047b29d
+005acb94 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acb98 : 0x0058e214  -> STRING "30ArmVertexBufferDynamicImplNeon"  -> SYM s_30ArmVertexBufferDynamicImplNeon_0058e214  -> ascii-ish "30ArmVertexBufferDynamic"
+005acb9c : 0x005acc04  -> SYM DAT_005acc04
+005acba0 : 0x00000000
+005acba4 : 0x005acbcc
+005acba8 : 0x0047b31d  -> FUNC FUN_0047b31c @ 0047b31c
+005acbac : 0x0047b335
+005acbb0 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4
+005acbb4 : 0x0047b281
+005acbb8 : 0x0047b36d
+
+===== window around 0x5acbb0 =====
+005acb70 : 0x0047b2a9  -> FUNC FUN_0047b2a8 @ 0047b2a8
+005acb74 : 0x0047b2c1
+005acb78 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4
+005acb7c : 0x0047b281
+005acb80 : 0x0047b36d
+005acb84 : 0x0047b371
+005acb88 : 0x0047b285
+005acb8c : 0x0047b291
+005acb90 : 0x0047b29d
+005acb94 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acb98 : 0x0058e214  -> STRING "30ArmVertexBufferDynamicImplNeon"  -> SYM s_30ArmVertexBufferDynamicImplNeon_0058e214  -> ascii-ish "30ArmVertexBufferDynamic"
+005acb9c : 0x005acc04  -> SYM DAT_005acc04
+005acba0 : 0x00000000
+005acba4 : 0x005acbcc
+005acba8 : 0x0047b31d  -> FUNC FUN_0047b31c @ 0047b31c
+005acbac : 0x0047b335
+005acbb0 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4   <=== HIT
+005acbb4 : 0x0047b281
+005acbb8 : 0x0047b36d
+005acbbc : 0x0047b371
+005acbc0 : 0x0047b2f9
+005acbc4 : 0x0047b305
+005acbc8 : 0x0047b311
+005acbcc : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acbd0 : 0x0058e238  -> STRING "29ArmVertexBufferDynamicImplVfp"  -> SYM s_29ArmVertexBufferDynamicImplVfp_0058e238  -> ascii-ish "29ArmVertexBufferDynamic"
+005acbd4 : 0x005acc04  -> SYM DAT_005acc04
+005acbd8 : 0x00000000
+005acbdc : 0x005acc04  -> SYM DAT_005acc04
+005acbe0 : 0x0047b4c9  -> FUNC FUN_0047b4c8 @ 0047b4c8
+005acbe4 : 0x0047b545
+005acbe8 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4
+005acbec : 0x0047b281
+005acbf0 : 0x0047b36d
+
+===== window around 0x5acbe8 =====
+005acba8 : 0x0047b31d  -> FUNC FUN_0047b31c @ 0047b31c
+005acbac : 0x0047b335
+005acbb0 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4
+005acbb4 : 0x0047b281
+005acbb8 : 0x0047b36d
+005acbbc : 0x0047b371
+005acbc0 : 0x0047b2f9
+005acbc4 : 0x0047b305
+005acbc8 : 0x0047b311
+005acbcc : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acbd0 : 0x0058e238  -> STRING "29ArmVertexBufferDynamicImplVfp"  -> SYM s_29ArmVertexBufferDynamicImplVfp_0058e238  -> ascii-ish "29ArmVertexBufferDynamic"
+005acbd4 : 0x005acc04  -> SYM DAT_005acc04
+005acbd8 : 0x00000000
+005acbdc : 0x005acc04  -> SYM DAT_005acc04
+005acbe0 : 0x0047b4c9  -> FUNC FUN_0047b4c8 @ 0047b4c8
+005acbe4 : 0x0047b545
+005acbe8 : 0x0047b8b5  -> FUNC FUN_0047b8b4 @ 0047b8b4   <=== HIT
+005acbec : 0x0047b281
+005acbf0 : 0x0047b36d
+005acbf4 : 0x0047b371
+005acbf8 : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005acbfc : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005acc00 : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005acc04 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acc08 : 0x0058e258  -> STRING "26ArmVertexBufferDynamicImpl"  -> ascii-ish "26ArmVertexBufferDynamic"
+005acc0c : 0x005acb10  -> SYM DAT_005acb10
+005acc10 : 0x00000000
+005acc14 : 0x005acc58  -> SYM DAT_005acc58
+005acc18 : 0x0047a1d5
+005acc1c : 0x0047a269
+005acc20 : 0x003b9b15
+005acc24 : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005acc28 : 0x0047a139
+
+===== window around 0x5acc78 =====
+005acc38 : 0x0047a11d
+005acc3c : 0x0047a121
+005acc40 : 0x0047a129
+005acc44 : 0x0047a131
+005acc48 : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005acc4c : 0x0047a135
+005acc50 : 0x0047bd31
+005acc54 : 0x0047a13d
+005acc58 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acc5c : 0x0058e278  -> STRING "17AGDynamicFontBase"  -> ascii-ish "17AGDynamicFontBase"
+005acc60 : 0x005a4688  -> SYM DAT_005a4688
+005acc64 : 0x00000000
+005acc68 : 0x00000000
+005acc6c : 0x005acc88
+005acc70 : 0x0047bfb5  -> FUNC FUN_0047bfb4 @ 0047bfb4
+005acc74 : 0x0047c04d
+005acc78 : 0x0047c381  -> FUNC FUN_0047c380 @ 0047c380   <=== HIT
+005acc7c : 0x0047bfa9
+005acc80 : 0x0047bfad
+005acc84 : 0x0047bfb1
+005acc88 : 0x005aa030  -> SYM PTR_~__si_class_type_info_005aa030
+005acc8c : 0x0058e28c  -> STRING "25AGVertexBufferDynamicImpl"  -> SYM s_25AGVertexBufferDynamicImpl_0058e28c  -> ascii-ish "25AGVertexBufferDynamicI"
+005acc90 : 0x005acb10  -> SYM DAT_005acb10
+005acc94 : 0x00000000
+005acc98 : 0x005aa070  -> SYM PTR_~__class_type_info_005aa070
+005acc9c : 0x0058e2a8  -> STRING "22AGNetworkEventListener"  -> ascii-ish "22AGNetworkEventListener"
+005acca0 : 0x00000000
+005acca4 : 0x005acc98
+005acca8 : 0x0041b600  -> FUNC __cxa_pure_virtual @ 0041b600
+005accac : 0x00000000
+005accb0 : 0x00000000
+005accb4 : 0x005accf4
+005accb8 : 0x0047d5e9  -> FUNC FUN_0047d5e8 @ 0047d5e8

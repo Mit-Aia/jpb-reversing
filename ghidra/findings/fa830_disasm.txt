@@ -1,0 +1,68 @@
+002fa910: blx r3
+002fa912: ldr r3,[0x002faa40]
+    -> 002faa40 type=READ
+002fa914: add r3,pc
+002fa916: ldr r7,[r3,#0x0]
+    -> 0064e570 type=READ
+002fa918: ldr r3,[r7,#0x0]
+002fa91a: ldr r5,[r3,#0x8]
+002fa91c: bl 0x002f4e30
+    -> 002f4e30 type=UNCONDITIONAL_CALL
+002fa920: ldr r1,[r0,#0x4]
+002fa922: mov r0,r7
+002fa924: blx r5
+002fa926: bl 0x002f4db8
+    -> 002f4db8 type=UNCONDITIONAL_CALL
+002fa92a: subs r1,r0,r6
+002fa92c: ldr.w r0,[r8,#0x0]
+    -> 0064f598 type=READ
+002fa930: bl 0x0031a874
+    -> 0031a874 type=UNCONDITIONAL_CALL
+002fa934: bl 0x002f4db8
+    -> 002f4db8 type=UNCONDITIONAL_CALL
+002fa938: mov r7,r0
+002fa93a: bl 0x003077f8
+    -> 003077f8 type=UNCONDITIONAL_CALL
+002fa93e: ldr r3,[r0,#0x0]
+002fa940: ldr r3,[r3,#0x4]
+002fa942: blx r3
+002fa944: bl 0x002f4db8
+    -> 002f4db8 type=UNCONDITIONAL_CALL
+002fa948: subs r1,r0,r7
+002fa94a: ldr.w r0,[r8,#0x0]
+    -> 0064f598 type=READ
+002fa94e: bl 0x0031a89c
+    -> 0031a89c type=UNCONDITIONAL_CALL
+002fa952: ldr r3,[0x002faa44]
+    -> 002faa44 type=READ
+002fa954: add r3,pc
+    -> 0064f590 type=PARAM
+002fa956: ldr r7,[r3,#0x0]
+    -> 0064f590 type=READ
+002fa958: bl 0x002f4e30
+    -> 002f4e30 type=UNCONDITIONAL_CALL
+002fa95c: ldr r1,[r0,#0x4]
+002fa95e: mov r0,r7
+002fa960: bl 0x003bc964
+    -> 003bc964 type=UNCONDITIONAL_CALL
+002fa964: bl 0x002f4db8
+    -> 002f4db8 type=UNCONDITIONAL_CALL
+002fa968: subs r1,r0,r6
+002fa96a: ldr.w r0,[r8,#0x0]
+    -> 0064f598 type=READ
+002fa96e: bl 0x0031a6a0
+    -> 0031a6a0 type=UNCONDITIONAL_CALL
+002fa972: ldr.w r0,[r8,#0x0]
+    -> 0064f598 type=READ
+002fa976: movs r1,#0x0
+002fa978: bl 0x0031a6f4
+    -> 0031a6f4 type=UNCONDITIONAL_CALL
+002fa97c: mov r0,r4
+002fa97e: bl 0x00317f00
+    -> 00317f00 type=UNCONDITIONAL_CALL
+002fa982: cmp r0,#0x0
+002fa984: bne 0x002faa06
+    -> 002faa06 type=CONDITIONAL_JUMP
+002fa986: ldr.w r3,[r4,#0x290]
+002fa98a: bic r3,r3,#0x8
+002fa98e: str.w r3,[r4,#0x290]

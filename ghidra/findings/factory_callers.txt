@@ -1,0 +1,39 @@
+=== callers of FUN_0047b1ac @ 0047b1ac ===
+  ref from 0035f874 in func FUN_0035f85c@0035f85c type=UNCONDITIONAL_CALL
+  total: 1
+
+----- FUNCTION FUN_0035f85c @ 0035f85c -----
+
+void FUN_0035f85c(int param_1,undefined4 param_2)
+
+{
+  void *pvVar1;
+  ushort *puVar2;
+  int iVar3;
+  uint uVar4;
+  uint *puVar5;
+  
+  *(undefined4 *)(param_1 + 0x4dc) = param_2;
+  pvVar1 = operator_new(8);
+  FUN_0047b1ac(pvVar1,*(undefined4 *)(param_1 + 0x458),*(undefined4 *)(param_1 + 0x4dc));
+  puVar5 = *(uint **)(param_1 + 0x4dc);
+  *(void **)(param_1 + 0x4d8) = pvVar1;
+  *(undefined4 *)(param_1 + 0x4f0) = 0;
+  puVar2 = (ushort *)puVar5[0x1b];
+  if (puVar2 != (ushort *)0x0) {
+    puVar2 = (ushort *)((int)puVar2 + (int)(puVar5 + 0x1b));
+  }
+  if (*puVar5 != 0) {
+    iVar3 = 0;
+    uVar4 = 0;
+    do {
+      uVar4 = uVar4 + 1;
+      iVar3 = iVar3 + (uint)*puVar2;
+      *(int *)(param_1 + 0x4f0) = iVar3;
+      puVar2 = puVar2 + 1;
+    } while (uVar4 < *puVar5);
+  }
+  return;
+}
+
+

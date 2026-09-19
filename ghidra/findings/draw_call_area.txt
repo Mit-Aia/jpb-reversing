@@ -1,0 +1,106 @@
+
+----- FUNCTION FUN_00309fc4 @ 00309fc4 -----
+
+void FUN_00309fc4(int *param_1,int param_2,undefined4 param_3)
+
+{
+  undefined4 uVar1;
+  int *piVar2;
+  undefined4 unaff_r4;
+  undefined4 unaff_r5;
+  int iVar3;
+  undefined4 unaff_r6;
+  int iVar4;
+  undefined4 uVar5;
+  
+  piVar2 = (int *)FUN_003077f8();
+  (**(code **)(*piVar2 + 0x44))(piVar2,param_3);
+  iVar3 = *(int *)(*(int *)(param_2 + 4) + 0x1c);
+  switch(*(undefined4 *)(*(int *)(param_2 + 4) + 0x18)) {
+  case 1:
+    iVar4 = iVar3 << 1;
+    uVar5 = 1;
+    break;
+  case 2:
+    iVar4 = iVar3 + 1;
+    uVar5 = 3;
+    break;
+  case 3:
+  case 7:
+    iVar4 = iVar3 * 3;
+    uVar5 = 4;
+    break;
+  case 4:
+    iVar4 = iVar3 + 2;
+    uVar5 = 5;
+    break;
+  default:
+    goto switchD_00309f68_caseD_5;
+  }
+  uVar1 = FUN_003077f8();
+  FUN_0036590c(uVar1,iVar3);
+  (**(code **)(*param_1 + 0x48))(param_1,param_2);
+  glDrawElements(uVar5,iVar4,0x1403,0,unaff_r4,unaff_r5,unaff_r6);
+  (**(code **)(*param_1 + 0x44))(param_1,param_2);
+switchD_00309f68_caseD_5:
+  return;
+}
+
+
+
+----- FUNCTION FUN_00308fc0 @ 00308fc0 -----
+
+void FUN_00308fc0(void)
+
+{
+  int iVar1;
+  int *piVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 local_54;
+  undefined4 uStack_50;
+  undefined4 uStack_4c;
+  undefined4 uStack_48;
+  undefined4 local_44;
+  undefined4 uStack_40;
+  undefined4 local_3c;
+  undefined4 uStack_38;
+  undefined4 uStack_34;
+  undefined4 uStack_30;
+  undefined4 local_2c;
+  undefined4 uStack_28;
+  undefined4 uStack_24;
+  undefined4 uStack_20;
+  undefined4 local_1c;
+  
+  piVar2 = (int *)FUN_003077f8();
+  iVar1 = DAT_00309054;
+  puVar3 = (undefined4 *)(DAT_00309054 + 0x308fd6);
+  puVar4 = (undefined4 *)(DAT_00309054 + 0x308ffa);
+  (**(code **)(*piVar2 + 0x1c))();
+  FUN_00308164(piVar2);
+  glBindBuffer(0x8892,0);
+  local_3c = *puVar3;
+  uStack_38 = *(undefined4 *)(iVar1 + 0x308fda);
+  uStack_34 = *(undefined4 *)(iVar1 + 0x308fde);
+  uStack_30 = *(undefined4 *)(iVar1 + 0x308fe2);
+  local_2c = *(undefined4 *)(iVar1 + 0x308fe6);
+  uStack_28 = *(undefined4 *)(iVar1 + 0x308fea);
+  uStack_24 = *(undefined4 *)(iVar1 + 0x308fee);
+  uStack_20 = *(undefined4 *)(iVar1 + 0x308ff2);
+  local_54 = *puVar4;
+  uStack_50 = *(undefined4 *)(iVar1 + 0x308ffe);
+  uStack_4c = *(undefined4 *)(iVar1 + 0x309002);
+  uStack_48 = *(undefined4 *)(iVar1 + 0x309006);
+  local_1c = *(undefined4 *)(iVar1 + 0x308ff6);
+  local_44 = *(undefined4 *)(iVar1 + 0x30900a);
+  uStack_40 = *(undefined4 *)(iVar1 + 0x30900e);
+  glEnableVertexAttribArray(0);
+  glEnableVertexAttribArray(3);
+  glVertexAttribPointer(0,3,0x1406,0,0,&local_3c);
+  glVertexAttribPointer(3,2,0x1406,0,0,&local_54);
+  glDrawArrays(4,0,3);
+  return;
+}
+
+
