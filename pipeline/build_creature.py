@@ -1,6 +1,6 @@
 """Build a rigged, animated creature dataset from a live capture + the game's cache files.
 
-  python build_creature.py <name> <capture_dir> <cache_dir> <idx_count> [out_dir]      (default: <repo>/export/<name>/)
+  python build_creature.py <name> <capture_dir> <cache_dir> <idx_count> [out_dir] [n_frames]      (default out_dir: <repo>/export/<name>/; n_frames keeps only the first N samples, e.g. one seamless loop)
 
 capture_dir must contain res_creature.bin (64KB dump of the mesh resource) and anim_creature.bin
 (sampler output: per frame u32 t, nSkin*12 pos, nSkin*12 normals, nb*64 Static, nb*64 Palette).
@@ -43,6 +43,8 @@ for k in range(nf):
     Bs[k] = np.frombuffer(raw, "<f4", nb * 16, o).reshape(nb, 4, 4); o += nb * 64
     Bp[k] = np.frombuffer(raw, "<f4", nb * 16, o).reshape(nb, 4, 4)
 print(f"{nf} frames; palette varies {np.abs(Bp - Bp[0]).max():.3f}, static varies {np.abs(Bs - Bs[0]).max():.6f}")
+if len(sys.argv) > 6:                                    # optional: keep only the first N frames (e.g. one seamless loop)
+    nf = int(sys.argv[6]); P, Bs, Bp = P[:nf], Bs[:nf], Bp[:nf]; print("trimmed to", nf, "frames")
 apply = lambda q, M: q @ M[:3, :3] + M[3, :3]
 def skin(k):
     out = np.zeros((nSkin, 3)); p = 0

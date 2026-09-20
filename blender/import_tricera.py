@@ -1,3 +1,4 @@
+# Usage: blender -b --python import_tricera.py -- rig.json out.blend out.glb tile.png render.png [name=extra_rig.json ...]  (use ABSOLUTE paths)
 # Builds a creature (mesh+skeleton+animation+UV+texture) as a real Blender rig from data captured out of the running game.
 # Usage (headless):  blender -b --python import_tricera.py -- tricera_rig.json out.blend [out.glb]
 # In the GUI: run from the Scripting tab after editing JSON_PATH below.
@@ -19,11 +20,19 @@ OUT_BLEND = argv[1] if len(argv) > 1 else None
 OUT_GLB = argv[2] if len(argv) > 2 else None
 TEX_PATH = argv[3] if len(argv) > 3 else None      # 128x128 tile cropped from the game atlas (see notes)
 OUT_RENDER = argv[4] if len(argv) > 4 else None
+# optional extra animations, each `name=<rig.json>` (same skeleton/mesh as argv[0], e.g. a sleep loop captured separately)
+EXTRA_ANIMS = [a.split("=", 1) for a in argv[5:]]
 
 d = json.load(open(JSON_PATH))
 rest, tris, infl, ids = d["rest"], d["tris"], d["influences"], d["boneIds"]
 pal, inv = d["palette_rowmajor"], d["invBind_rowmajor"]
-nf, nb = len(pal), len(ids)
+nb = len(ids)
+ANIMS = [("idle", pal)]
+for aname, apath in EXTRA_ANIMS:
+    e = json.load(open(apath))
+    assert e["boneIds"] == ids and e["invBind_rowmajor"] == inv, "extra animation %s is not on the same skeleton" % aname
+    ANIMS.append((aname, e["palette_rowmajor"]))
+nf = max(len(a[1]) for a in ANIMS)
 NAME = d.get("name", "Creature")
 
 
@@ -89,15 +98,22 @@ bpy.context.view_layer.objects.active = arm
 bpy.ops.object.mode_set(mode="POSE")
 for pb in arm.pose.bones:
     pb.rotation_mode = "QUATERNION"
-for f in range(nf):
-    for g in range(nb):
-        pb = arm.pose.bones["bone_%02d" % ids[g]]
-        pb.matrix = mcol(pal[f][g])
-        fr = f + 1
-        pb.keyframe_insert("location", frame=fr)
-        pb.keyframe_insert("rotation_quaternion", frame=fr)
-        pb.keyframe_insert("scale", frame=fr)
-    bpy.context.view_layer.update()
+arm.animation_data_create()
+ACTIONS = []
+for aname, apal in ANIMS:
+    act = bpy.data.actions.new(aname)
+    act.use_fake_user = True
+    arm.animation_data.action = act
+    for f in range(len(apal)):
+        for g in range(nb):
+            pb = arm.pose.bones["bone_%02d" % ids[g]]
+            pb.matrix = mcol(apal[f][g])
+            fr = f + 1
+            pb.keyframe_insert("location", frame=fr)
+            pb.keyframe_insert("rotation_quaternion", frame=fr)
+            pb.keyframe_insert("scale", frame=fr)
+        bpy.context.view_layer.update()
+    ACTIONS.append(act)
 bpy.ops.object.mode_set(mode="OBJECT")
 
 
@@ -110,7 +126,7 @@ arm.parent = root
 obj.parent = arm      # glTF exporter requires the armature to be the parent of the skinned mesh
 
 
-def reference(f):
+def reference(f, pal):
     out = [Matrix.Identity(4).col[3].xyz * 0 for _ in rest]
     for vi, lst in enumerate(infl):
         acc = None
@@ -122,17 +138,21 @@ def reference(f):
 
 
 worst = 0.0
-for f in (0, nf // 4, nf // 2, nf - 1):
-    scene.frame_set(f + 1)
-    ev = obj.evaluated_get(bpy.context.evaluated_depsgraph_get())
-    me = ev.to_mesh()
-    ref = reference(f)
-    err = max((me.vertices[i].co - ref[i]).length for i in range(len(ref)))
-    worst = max(worst, err)
-    print("VERIFY frame %d: max deformed-vs-reference error = %.6f" % (f + 1, err))
-    ev.to_mesh_clear()
+for (aname, apal), act in zip(ANIMS, ACTIONS):
+    arm.animation_data.action = act
+    n = len(apal)
+    for f in (0, n // 4, n // 2, n - 1):
+        scene.frame_set(f + 1)
+        ev = obj.evaluated_get(bpy.context.evaluated_depsgraph_get())
+        me = ev.to_mesh()
+        ref = reference(f, apal)
+        err = max((me.vertices[i].co - ref[i]).length for i in range(len(ref)))
+        worst = max(worst, err)
+        print("VERIFY %s frame %d: max deformed-vs-reference error = %.6f" % (aname, f + 1, err))
+        ev.to_mesh_clear()
 print("VERIFY worst error = %.6f" % worst)
 
+arm.animation_data.action = ACTIONS[0]
 scene.frame_set(1)
 if OUT_RENDER:
     from mathutils import Vector
@@ -148,6 +168,12 @@ if OUT_RENDER:
     scene.render.filepath = OUT_RENDER
     bpy.ops.render.render(write_still=True)
     print("rendered", OUT_RENDER)
+# one NLA track per animation so the .blend keeps them all and the glTF exporter writes each as its own clip
+ad = arm.animation_data
+ad.action = None
+for (aname, apal), act in zip(ANIMS, ACTIONS):
+    tr = ad.nla_tracks.new(); tr.name = aname
+    tr.strips.new(aname, 1, act)
 if OUT_BLEND:
     bpy.ops.wm.save_as_mainfile(filepath=OUT_BLEND)
     print("saved", OUT_BLEND)
