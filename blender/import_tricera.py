@@ -66,9 +66,9 @@ if TEX_PATH:
     img.pack()
     tn = mat.node_tree.nodes.new("ShaderNodeTexImage")
     tn.image = img
-    tn.interpolation = "Closest"
+    tn.interpolation = "Linear"      # game samples with linear filtering; "Closest" made the 128px tiles look like blocks
     mat.node_tree.links.new(tn.outputs["Color"], bsdf.inputs["Base Color"])
-    bsdf.inputs["Roughness"].default_value = 0.9
+    bsdf.inputs["Roughness"].default_value = 0.55   # game shader: glossiness 0.14*128 -> mildly shiny, not fully matte
     mesh.materials.append(mat)
 
 arm_data = bpy.data.armatures.new(NAME + "Rig")
@@ -174,6 +174,7 @@ ad.action = None
 for (aname, apal), act in zip(ANIMS, ACTIONS):
     tr = ad.nla_tracks.new(); tr.name = aname
     tr.strips.new(aname, 1, act)
+    tr.mute = len(ad.nla_tracks) > 1      # tracks overlap in time: only the first clip plays by default (unmute / Solo another in the NLA editor)
 if OUT_BLEND:
     bpy.ops.wm.save_as_mainfile(filepath=OUT_BLEND)
     print("saved", OUT_BLEND)

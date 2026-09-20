@@ -1,6 +1,6 @@
 """Build a rigged, animated creature dataset from a live capture + the game's cache files.
 
-  python build_creature.py <name> <capture_dir> <cache_dir> <idx_count> [out_dir] [n_frames]      (default out_dir: <repo>/export/<name>/; n_frames keeps only the first N samples, e.g. one seamless loop)
+  python build_creature.py <name> <capture_dir> <cache_dir> <idx_count> [out_dir] [n_frames] [start_frame]      (default out_dir: <repo>/export/<name>/; n_frames keeps only the first N samples, e.g. one seamless loop)
 
 capture_dir must contain res_creature.bin (64KB dump of the mesh resource) and anim_creature.bin
 (sampler output: per frame u32 t, nSkin*12 pos, nSkin*12 normals, nb*64 Static, nb*64 Palette).
@@ -44,7 +44,8 @@ for k in range(nf):
     Bp[k] = np.frombuffer(raw, "<f4", nb * 16, o).reshape(nb, 4, 4)
 print(f"{nf} frames; palette varies {np.abs(Bp - Bp[0]).max():.3f}, static varies {np.abs(Bs - Bs[0]).max():.6f}")
 if len(sys.argv) > 6:                                    # optional: keep only the first N frames (e.g. one seamless loop)
-    nf = int(sys.argv[6]); P, Bs, Bp = P[:nf], Bs[:nf], Bp[:nf]; print("trimmed to", nf, "frames")
+    a0 = int(sys.argv[7]) if len(sys.argv) > 7 else 0        # optional 7th arg: first frame to keep (clip = frames [a0, a0+n))
+    nf = int(sys.argv[6]); P, Bs, Bp = P[a0:a0 + nf], Bs[a0:a0 + nf], Bp[a0:a0 + nf]; nf = len(P); print("clip frames", a0, "..", a0 + nf - 1)
 apply = lambda q, M: q @ M[:3, :3] + M[3, :3]
 def skin(k):
     out = np.zeros((nSkin, 3)); p = 0
@@ -93,7 +94,10 @@ for off in range(chunk - 2 * idx_count - 96, chunk - 2 * idx_count + 96, 2):
     if best is None or key < best[0]: best = (key, off, t)
 (deg, notall, em), tri_off, tri = best
 print(f"triangles at {tri_off}: {len(tri)} tris, degenerate {deg}, all verts used {not notall}, mean edge {em:.2f}")
-assert deg == 0, "triangle array not cleanly aligned"
+assert best[1] + 2 * idx_count in (chunk - 8, chunk - 4, chunk), "triangle array does not end just before the mesh chunk"
+assert deg <= max(2, len(tri) // 500), "triangle array not cleanly aligned"
+if deg:                                                   # a few degenerate faces exist in the game data itself; drop them
+    keep = np.array([len(set(x)) == 3 for x in tri.tolist()]); print(f"dropping {int((~keep).sum())} degenerate triangles from the game data"); tri = tri[keep]
 
 infl = [[] for _ in range(nSkin)]; p = 0
 for g in range(nb):
