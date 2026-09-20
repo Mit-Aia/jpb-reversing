@@ -1,8 +1,8 @@
 // Records BOTH creatures of the arena at once (30 s, ~33 ms/sample) -> anim_A.bin / anim_B.bin (same layout as anim_creature.bin) + res_creature.bin.
-// A = first grabbed node, B = the other node running the same mesh. Needs 30_grab_all.js first. Which one is "yours" is decided later from the data.
+// A = first grabbed object, B = another object (may share the scene node) running the same mesh. Needs 30_grab_all.js first. Which one is "yours" is decided later from the data.
 const PKG = "/data/data/com.ludia.jurassicpark/", SAMPLES = 900, PERIOD = 33;
 const objs = Object.values(globalThis.__objs).sort((a, b) => b.nV - a.nV);
-const first = objs[0], second = objs.find(o => o.nV === first.nV && o.pnode !== first.pnode && o.res === first.res);
+const first = objs[0], second = objs.find(o => o.nV === first.nV && String(o.self) !== String(first.self) && o.nV === first.nV && o.nb === first.nb);
 const u32 = p => p.readU32();
 const res = ptr(first.res), w = i => u32(res.add(i * 4)), nb = w(0), nV = first.nV, nRender = w(1);
 const ids = []; for (let i = 0; i < nb; i++) ids.push(res.add(26 * 4 + w(26) + 0x68 - 26 * 4 + 0).add(i * 2).readU16());

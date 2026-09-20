@@ -156,10 +156,12 @@ arm.animation_data.action = ACTIONS[0]
 scene.frame_set(1)
 if OUT_RENDER:
     from mathutils import Vector
-    lo = [min(v[i] for v in rest) for i in range(3)]; hi = [max(v[i] for v in rest) for i in range(3)]
+    # frame the ANIMATED mesh at frame 1 (flyers carry their world position in the bone palette, so the rest pose can be far away)
+    ev = obj.evaluated_get(bpy.context.evaluated_depsgraph_get()); me = ev.to_mesh(); pts = [obj.matrix_world @ v.co for v in me.vertices]; ev.to_mesh_clear()
+    lo = [min(p[i] for p in pts) for i in range(3)]; hi = [max(p[i] for p in pts) for i in range(3)]
     ext = max(hi[i] - lo[i] for i in range(3))
-    cx, cy, cz = (lo[0] + hi[0]) / 2, -(lo[2] + hi[2]) / 2, (lo[1] + hi[1]) / 2      # game (x,y,z) -> Blender (x,-z,y)
-    cam_d = bpy.data.cameras.new("Cam"); cam_d.type = "ORTHO"; cam_d.ortho_scale = ext * 1.3
+    cx, cy, cz = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, (lo[2] + hi[2]) / 2          # already Blender world coordinates
+    cam_d = bpy.data.cameras.new("Cam"); cam_d.type = "ORTHO"; cam_d.ortho_scale = ext * 1.9
     cam = bpy.data.objects.new("Cam", cam_d); scene.collection.objects.link(cam)
     cam.location = (cx + 200, cy, cz); cam.rotation_euler = (math.radians(90), 0, math.radians(90)); scene.camera = cam
     scene.render.engine = "BLENDER_WORKBENCH"
