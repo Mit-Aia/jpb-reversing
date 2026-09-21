@@ -59,6 +59,19 @@ def skin(k):
         for _ in range(cnt[g]):
             v = lists[p]; out[v] += apply(apply(rest[v], Bs[k][g]), Bp[k][g]) * wts[p]; p += 1
     return out
+# timer-based samplers can read positions and bones at different moments of the game's update: check EVERY frame and repair the few torn ones
+allerr = np.array([np.abs(skin(k) - P[k]).max() for k in range(nf)])
+bad = np.where(allerr > 1e-2)[0]
+if len(bad):
+    print(f"torn frames (skin error > 0.01): {len(bad)} of {nf} -> replaced by the previous consistent frame")
+    assert len(bad) <= max(5, nf // 20), "too many inconsistent frames - resample without hooks"
+    for k in bad:
+        j = k - 1
+        while j >= 0 and allerr[j] > 1e-2: j -= 1
+        if j < 0:
+            j = k + 1
+            while allerr[j] > 1e-2: j += 1
+        P[k], Bs[k], Bp[k] = P[j], Bs[j], Bp[j]
 errs = [np.abs(skin(k) - P[k]).max() for k in (0, nf // 3, 2 * nf // 3, nf - 1)]
 print("skinning reproduction max error over 4 frames:", np.round(errs, 5))
 assert max(errs) < 1e-2, "skin formula does not reproduce live vertices"

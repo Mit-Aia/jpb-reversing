@@ -1,6 +1,6 @@
 // LONG sampler (50 s): same as 31_sample_generic but SAMPLES=1500, for recording a whole sequence of animations (attacks etc.). Needs 30_grab_all first.
 const PKG = "/data/data/com.ludia.jurassicpark/";
-const objs = Object.values(globalThis.__objs).sort((a, b) => b.nV - a.nV);
+const objs = Object.values(globalThis.__objs).filter(o => !(globalThis.__targetNV) || o.nV === globalThis.__targetNV).sort((a, b) => b.nV - a.nV);   // optional globalThis.__targetNV picks one mesh in a crowded park
 const big = objs[0], self = big.self, u32 = p => p.readU32();
 const res = ptr(big.res), w = i => u32(res.add(i * 4));
 const nb = w(0), nV = big.nV, nRender = w(1), nPairs = w(4);
