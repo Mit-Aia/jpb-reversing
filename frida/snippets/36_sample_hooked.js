@@ -2,7 +2,7 @@
 // per-frame update, so a timer cannot read a consistent palette. Record from inside the update (FUN_0047b8b4, onLeave) instead.
 // Needs 30_grab_all.js first. Records the two biggest distinct objects with the same mesh size -> anim_A.bin / anim_B.bin (+ res_A.bin / res_B.bin, each creature's own resource),
 // every 2nd call (~30 Hz), SAMPLES per object. Same file layout as 31/33 (t, pos, normals, Static, Palette).
-const PKG = "/data/data/com.ludia.jurassicpark/", SAMPLES = 900, EVERY = 2;
+const PKG = "/data/data/com.ludia.jurassicpark/", SAMPLES = globalThis.__samples || 900, EVERY = 2;   // set globalThis.__samples (e.g. 3000 = ~100 s) first for long, non-looping wander animations
 const mod = Process.findModuleByName("libJurassicPark.so"), u32 = p => p.readU32();
 const TARGET = globalThis.__targetNV || 0;   // crowded scenes: set globalThis.__targetNV = <nV of the creature> with a tiny snippet first
 const objs = Object.values(globalThis.__objs).filter(o => !TARGET || o.nV === TARGET).sort((a, b) => b.nV - a.nV), first = objs[0];

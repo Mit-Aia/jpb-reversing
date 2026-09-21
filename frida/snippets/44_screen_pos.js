@@ -13,8 +13,9 @@ Interceptor.attach(mod.base.add(0x309fc4 - 0x10000).add(1), { onEnter(a) {
   const tris = ptr(inner).add(0x1c).readU32(); if (tris < LO || tris > HI) return; const M = m4[0], V = m4[1], Pj = m4[2];
   if (M[12] === 0 && M[13] === 0 && M[14] === 0) return;
   const mvp = mul(mul(M, V), Pj), x = mvp[12], y = mvp[13], w = mvp[15] || 1, px = Math.round((x / w + 1) / 2 * W), py = Math.round((1 - y / w) / 2 * H);
-  const key = tris + ":" + px + ":" + py; if (seen[key]) return; seen[key] = 1; shown++;
   const u = m4[3] ? m4[3].map(v => +v.toFixed(5)) : null;
+  if (u && u[0] === 1) return;                     // identity uv scale = particles/UI (snow, rain): creatures always sample a TILE (scale < 1)
+  const key = tris + ":" + px + ":" + py; if (seen[key]) return; seen[key] = 1; shown++;
   log("SCREEN tris=" + tris + " px=(" + px + "," + py + ") tex=" + cur[0] + " uv=" + JSON.stringify(u ? [u[0], u[12], u[13]] : null));
 } });
 log("screen-pos hook installed");
