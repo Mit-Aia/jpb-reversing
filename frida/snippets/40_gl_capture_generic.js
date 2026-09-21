@@ -1,5 +1,5 @@
 // Generic texture capture: set PRIMS to the creature's triangle count (draw descriptor word[7]).
-const PRIMS = 448;
+const PRIMS = 1999;
 const PKG = "/data/data/com.ludia.jurassicpark/";
 const mod = Process.findModuleByName("libJurassicPark.so");
 const gl = n => Module.findExportByName("libGLESv2.so", n);

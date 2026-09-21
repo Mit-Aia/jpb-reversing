@@ -4,7 +4,8 @@
 // every 2nd call (~30 Hz), SAMPLES per object. Same file layout as 31/33 (t, pos, normals, Static, Palette).
 const PKG = "/data/data/com.ludia.jurassicpark/", SAMPLES = 900, EVERY = 2;
 const mod = Process.findModuleByName("libJurassicPark.so"), u32 = p => p.readU32();
-const objs = Object.values(globalThis.__objs).sort((a, b) => b.nV - a.nV), first = objs[0];
+const TARGET = globalThis.__targetNV || 0;   // crowded scenes: set globalThis.__targetNV = <nV of the creature> with a tiny snippet first
+const objs = Object.values(globalThis.__objs).filter(o => !TARGET || o.nV === TARGET).sort((a, b) => b.nV - a.nV), first = objs[0];
 const second = objs.find(o => String(o.self) !== String(first.self) && o.nV === first.nV && o.nb === first.nb);
 const res = ptr(first.res), w = i => u32(res.add(i * 4)), nb = w(0), nV = first.nV;
 // each creature has its OWN copy of the mesh resource and its OWN bone ids inside the shared bone array (Pteranodon B = A's ids + 1)

@@ -9,7 +9,7 @@
 #   Palette_g = game record +0x64  (bone -> world, animated per frame)
 # In Blender (column vectors): rest bone matrix R = inv(Static^T), posed bone matrix P = Palette^T,
 # and Blender's deform matrix P * R^-1 == (Static * Palette)^T, exactly the game's.
-import bpy, json, sys
+import bpy, json, sys, math
 from mathutils import Matrix
 
 JSON_PATH = "tricera_rig.json"
@@ -32,6 +32,7 @@ for aname, apath in EXTRA_ANIMS:
     e = json.load(open(apath))
     assert e["boneIds"] == ids and e["invBind_rowmajor"] == inv, "extra animation %s is not on the same skeleton" % aname
     ANIMS.append((aname, e["palette_rowmajor"]))
+    if abs(float(e.get("fps", 30)) - float(d.get("fps", 30))) > 0.5: print("WARNING: clip %s fps %s differs from base %s" % (aname, e.get("fps"), d.get("fps")))
 nf = max(len(a[1]) for a in ANIMS)
 NAME = d.get("name", "Creature")
 
@@ -42,8 +43,9 @@ def mcol(m16):
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.context.scene
-scene.render.fps = int(d.get("fps", 30))
-scene.frame_start, scene.frame_end = 1, nf
+FPS = float(d.get("fps", 30)); scene.render.fps = int(round(FPS))
+TS = round(FPS) / FPS      # keyframes are spaced TS frames apart so that glTF/Blender time = real capture time even when the game sampled at 8-30 Hz
+scene.frame_start, scene.frame_end = 1, int(math.ceil(1 + (nf - 1) * TS))
 
 mesh = bpy.data.meshes.new(NAME)
 mesh.from_pydata([tuple(v) for v in rest], [], [tuple(t) for t in tris])
@@ -108,7 +110,7 @@ for aname, apal in ANIMS:
         for g in range(nb):
             pb = arm.pose.bones["bone_%02d" % ids[g]]
             pb.matrix = mcol(apal[f][g])
-            fr = f + 1
+            fr = 1 + f * TS
             pb.keyframe_insert("location", frame=fr)
             pb.keyframe_insert("rotation_quaternion", frame=fr)
             pb.keyframe_insert("scale", frame=fr)
@@ -142,7 +144,7 @@ for (aname, apal), act in zip(ANIMS, ACTIONS):
     arm.animation_data.action = act
     n = len(apal)
     for f in (0, n // 4, n // 2, n - 1):
-        scene.frame_set(f + 1)
+        ff = 1 + f * TS; scene.frame_set(int(ff), subframe=ff - int(ff))
         ev = obj.evaluated_get(bpy.context.evaluated_depsgraph_get())
         me = ev.to_mesh()
         ref = reference(f, apal)

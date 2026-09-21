@@ -43,9 +43,15 @@ for k in range(nf):
     Bs[k] = np.frombuffer(raw, "<f4", nb * 16, o).reshape(nb, 4, 4); o += nb * 64
     Bp[k] = np.frombuffer(raw, "<f4", nb * 16, o).reshape(nb, 4, 4)
 print(f"{nf} frames; palette varies {np.abs(Bp - Bp[0]).max():.3f}, static varies {np.abs(Bs - Bs[0]).max():.6f}")
+a0 = 0
 if len(sys.argv) > 6:                                    # optional: keep only the first N frames (e.g. one seamless loop)
     a0 = int(sys.argv[7]) if len(sys.argv) > 7 else 0        # optional 7th arg: first frame to keep (clip = frames [a0, a0+n))
     nf = int(sys.argv[6]); P, Bs, Bp = P[a0:a0 + nf], Bs[a0:a0 + nf], Bp[a0:a0 + nf]; nf = len(P); print("clip frames", a0, "..", a0 + nf - 1)
+# real sample rate from the recorded timestamps (hook-based samplers run once per game frame, which can be 8-30 Hz)
+ts = np.array([struct.unpack_from("<I", raw, (a0 + k) * stride)[0] for k in range(nf)], float)
+fps_meas = 1000.0 / np.diff(ts).mean() if nf > 1 else 30.0
+fps = 30.0 if abs(fps_meas - 30.0) < 1.5 else round(float(fps_meas), 2)
+print(f"sample rate {fps_meas:.2f} Hz -> fps {fps}")
 apply = lambda q, M: q @ M[:3, :3] + M[3, :3]
 def skin(k):
     out = np.zeros((nSkin, 3)); p = 0
@@ -108,7 +114,7 @@ data = {"name": name, "boneIds": ids.tolist(), "rest": Vr.round(6).tolist(), "tr
         "invBind_rowmajor": Bs[0].reshape(nb, 16).round(7).tolist(),
         "palette_rowmajor": Bp.reshape(nf, nb, 16).round(6).tolist(),
         "uv_game": uv_game.round(6).tolist(), "uv": [[u, 1 - v] for u, v in uv_game.round(6).tolist()],
-        "normals": F[:, 3:6].astype(float).round(5).tolist(), "fps": 30.0,
+        "normals": F[:, 3:6].astype(float).round(5).tolist(), "fps": fps,
         "source": {"dab": os.path.basename(path), "meshChunk": int(chunk), "vertexBuffer": int(vb), "triangles": int(tri_off)}}
 json.dump(data, open(os.path.join(outdir, f"{name}_rig.json"), "w"))
 with open(os.path.join(outdir, f"{name}_rest.obj"), "w") as f:
