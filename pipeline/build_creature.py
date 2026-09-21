@@ -69,21 +69,29 @@ sig = rest[:4].astype("<f4").tobytes()                    # 4 consecutive skin v
 found = None
 for path in sorted(glob.glob(os.path.join(cache, "*.dab"))):
     if os.path.getsize(path) > 300_000_000: continue
-    d = open(path, "rb").read(); i = d.find(sig)
+    d = open(path, "rb").read(); i = d.find(sig); cands = []
     while i >= 0:
         chunk = i - posOff
-        if chunk >= 0 and d[chunk:chunk + 4] == res[:4] and d[chunk + 0x150 - 0x150 + 4:chunk + 8] == res[4:8]:
-            found = (path, d, chunk); break
+        if chunk >= 0 and d[chunk:chunk + 4] == res[:4] and d[chunk + 0x150 - 0x150 + 4:chunk + 8] == res[4:8]: cands.append(chunk)
         i = d.find(sig, i + 1)
-    if found: break
+    if cands:                                             # several byte-similar copies (variants/duplicates): take the one closest to the LIVE resource
+        def prefix(c):
+            n = 0
+            while n < min(len(res), 0x2000) and d[c + n] == res[n]: n += 1
+            return n
+        best = max(cands, key=prefix); found = (path, d, best)
+        if len(cands) > 1: print("copies:", [(c, prefix(c)) for c in cands], "-> using", best)
+        break
 assert found, "no cache .dab contains this mesh chunk"
 path, dab, chunk = found
 print("source:", os.path.basename(path), "mesh chunk at", chunk)
 # interleaved vertex buffer: render verts 0..2 at stride 36
-vb = None; i = dab.find(V0[0].tobytes())
+vb = None; vbs = []; i = dab.find(V0[0].tobytes())
 while i >= 0:
-    if dab[i + 36:i + 48] == V0[1].tobytes() and dab[i + 72:i + 84] == V0[2].tobytes(): vb = i; break
+    if dab[i + 36:i + 48] == V0[1].tobytes() and dab[i + 72:i + 84] == V0[2].tobytes(): vbs.append(i)
     i = dab.find(V0[0].tobytes(), i + 1)
+if vbs: vb = max([v for v in vbs if v < chunk] or vbs)          # duplicated copies share positions: use the buffer nearest below the chosen mesh chunk
+if len(vbs) > 1: print("vertex buffer candidates:", vbs, "-> using", vb)
 assert vb is not None, "vertex buffer not found"
 A = np.frombuffer(dab, "<u4", nRender * 9, vb).reshape(nRender, 9)
 F = A.view("<f4"); assert np.allclose(F[:, :3], rest[remap], atol=1e-4), "vertex buffer positions do not match remap"
@@ -100,7 +108,7 @@ for off in range(chunk - 2 * idx_count - 96, chunk - 2 * idx_count + 96, 2):
     if best is None or key < best[0]: best = (key, off, t)
 (deg, notall, em), tri_off, tri = best
 print(f"triangles at {tri_off}: {len(tri)} tris, degenerate {deg}, all verts used {not notall}, mean edge {em:.2f}")
-assert best[1] + 2 * idx_count in (chunk - 8, chunk - 4, chunk), "triangle array does not end just before the mesh chunk"
+assert chunk - 16 <= best[1] + 2 * idx_count <= chunk, "triangle array does not end just before the mesh chunk"   # su: chunk-8, aq (Dunkleosteus): chunk-6
 assert deg <= max(2, len(tri) // 500), "triangle array not cleanly aligned"
 if deg:                                                   # a few degenerate faces exist in the game data itself; drop them
     keep = np.array([len(set(x)) == 3 for x in tri.tolist()]); print(f"dropping {int((~keep).sum())} degenerate triangles from the game data"); tri = tri[keep]

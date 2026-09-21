@@ -1,6 +1,6 @@
 // Logs the first N draws with a DISTINCT tile matrix / bound texture of PRIMS tris whose unit-0 texture is really bound (skips warm-up draws). uv matrix is loc 3 (normal models) or loc 4 (battle).
 // Use AFTER 40_gl_capture_generic.js has dumped the uploads (tx_<id>_*.bin); this one only tracks bindings + the tile matrix.
-const PRIMS = 450, N = 8, LO = 1000, HI = 3000;   // PRIMS=0: log every draw with LO<=tris<=HI (battle: creatures unknown yet)
+const PRIMS = 516, N = 12, LO = 200, HI = 1500;   // PRIMS=0: log every draw with LO<=tris<=HI (battle: creatures unknown yet)
 const mod = Process.findModuleByName("libJurassicPark.so");
 const gl = n => Module.findExportByName("libGLESv2.so", n);
 let unit = 0, shown = 0; const cur = {}, m4 = {}, seenPos = {};
