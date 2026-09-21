@@ -1,0 +1,4144 @@
+{
+ "aqbattledino_ammonit": [
+  {
+   "groups": 23,
+   "render_verts": 2265,
+   "tris": 4070,
+   "copies": 1,
+   "chunks": [
+    1084336
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1819,
+   "tris": 3144,
+   "copies": 1,
+   "chunks": [
+    1261968
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1584,
+   "tris": 2796,
+   "copies": 1,
+   "chunks": [
+    1412368
+   ]
+  }
+ ],
+ "aqbattledino_anomalo": [
+  {
+   "groups": 25,
+   "render_verts": 2264,
+   "tris": 2764,
+   "copies": 1,
+   "chunks": [
+    1797968
+   ]
+  }
+ ],
+ "aqbattledino_basilos": [
+  {
+   "groups": 22,
+   "render_verts": 2043,
+   "tris": 3208,
+   "copies": 1,
+   "chunks": [
+    367360
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 3357,
+   "tris": 3784,
+   "copies": 1,
+   "chunks": [
+    607680
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1962,
+   "tris": 3376,
+   "copies": 1,
+   "chunks": [
+    809072
+   ]
+  }
+ ],
+ "aqbattledino_colossq": [
+  {
+   "groups": 40,
+   "render_verts": 2572,
+   "tris": 2964,
+   "copies": 1,
+   "chunks": [
+    440240
+   ]
+  }
+ ],
+ "aqbattledino_dunkleo": [
+  {
+   "groups": 12,
+   "render_verts": 1126,
+   "tris": 1950,
+   "copies": 1,
+   "chunks": [
+    304304
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 1284,
+   "tris": 1674,
+   "copies": 1,
+   "chunks": [
+    412416
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 1162,
+   "tris": 1892,
+   "copies": 1,
+   "chunks": [
+    509616
+   ]
+  }
+ ],
+ "aqbattledino_elasmos": [
+  {
+   "groups": 24,
+   "render_verts": 1660,
+   "tris": 2684,
+   "copies": 1,
+   "chunks": [
+    437472
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 1673,
+   "tris": 2774,
+   "copies": 1,
+   "chunks": [
+    593904
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 1437,
+   "tris": 2410,
+   "copies": 1,
+   "chunks": [
+    738528
+   ]
+  }
+ ],
+ "aqbattledino_geosaur": [
+  {
+   "groups": 20,
+   "render_verts": 1697,
+   "tris": 2588,
+   "copies": 1,
+   "chunks": [
+    346064
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2012,
+   "tris": 2640,
+   "copies": 1,
+   "chunks": [
+    502928
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2019,
+   "tris": 3290,
+   "copies": 1,
+   "chunks": [
+    670784
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1887,
+   "tris": 3018,
+   "copies": 1,
+   "chunks": [
+    836112
+   ]
+  }
+ ],
+ "aqbattledino_kronosa": [
+  {
+   "groups": 15,
+   "render_verts": 1076,
+   "tris": 1682,
+   "copies": 1,
+   "chunks": [
+    308032
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 1694,
+   "tris": 2760,
+   "copies": 1,
+   "chunks": [
+    434768
+   ]
+  }
+ ],
+ "aqbattledino_leedsic": [
+  {
+   "groups": 16,
+   "render_verts": 2093,
+   "tris": 3108,
+   "copies": 1,
+   "chunks": [
+    453552
+   ]
+  }
+ ],
+ "aqbattledino_megalod": [
+  {
+   "groups": 12,
+   "render_verts": 1502,
+   "tris": 2494,
+   "copies": 1,
+   "chunks": [
+    359408
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 2005,
+   "tris": 2687,
+   "copies": 1,
+   "chunks": [
+    521248
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 1490,
+   "tris": 2506,
+   "copies": 1,
+   "chunks": [
+    671792
+   ]
+  }
+ ],
+ "aqbattledino_mosasau": [
+  {
+   "groups": 17,
+   "render_verts": 1572,
+   "tris": 2648,
+   "copies": 1,
+   "chunks": [
+    416672
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 1514,
+   "tris": 2474,
+   "copies": 1,
+   "chunks": [
+    558080
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 1813,
+   "tris": 2870,
+   "copies": 1,
+   "chunks": [
+    711216
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 1394,
+   "tris": 2158,
+   "copies": 1,
+   "chunks": [
+    852880
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 1527,
+   "tris": 2488,
+   "copies": 1,
+   "chunks": [
+    987088
+   ]
+  }
+ ],
+ "aqbattledino_protosp": [
+  {
+   "groups": 10,
+   "render_verts": 831,
+   "tris": 1434,
+   "copies": 3,
+   "chunks": [
+    377600,
+    456832,
+    536064
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 1804,
+   "tris": 2972,
+   "copies": 1,
+   "chunks": [
+    660128
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 1768,
+   "tris": 2950,
+   "copies": 3,
+   "chunks": [
+    823040,
+    981136,
+    1139232
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 1162,
+   "tris": 2012,
+   "copies": 3,
+   "chunks": [
+    1270448,
+    1376320,
+    1482192
+   ]
+  }
+ ],
+ "aqbattledino_psephod": [
+  {
+   "groups": 14,
+   "render_verts": 1497,
+   "tris": 2586,
+   "copies": 1,
+   "chunks": [
+    321440
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 1624,
+   "tris": 2704,
+   "copies": 1,
+   "chunks": [
+    459488
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1899,
+   "tris": 3302,
+   "copies": 1,
+   "chunks": [
+    610688
+   ]
+  }
+ ],
+ "aqbattledino_seascor": [
+  {
+   "groups": 24,
+   "render_verts": 2369,
+   "tris": 4068,
+   "copies": 1,
+   "chunks": [
+    470272
+   ]
+  }
+ ],
+ "aqbattledino_shonisa": [
+  {
+   "groups": 18,
+   "render_verts": 1321,
+   "tris": 2296,
+   "copies": 1,
+   "chunks": [
+    311328
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 1339,
+   "tris": 2328,
+   "copies": 1,
+   "chunks": [
+    434112
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 1440,
+   "tris": 2508,
+   "copies": 1,
+   "chunks": [
+    566656
+   ]
+  }
+ ],
+ "aqbattledino_trinacr": [
+  {
+   "groups": 19,
+   "render_verts": 1360,
+   "tris": 2128,
+   "copies": 1,
+   "chunks": [
+    350624
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1550,
+   "tris": 2300,
+   "copies": 1,
+   "chunks": [
+    485888
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1510,
+   "tris": 2422,
+   "copies": 1,
+   "chunks": [
+    625296
+   ]
+  }
+ ],
+ "aqdino_ammonit": [
+  {
+   "groups": 21,
+   "render_verts": 492,
+   "tris": 640,
+   "copies": 1,
+   "chunks": [
+    915328
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 752,
+   "tris": 946,
+   "copies": 1,
+   "chunks": [
+    963952
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 471,
+   "tris": 746,
+   "copies": 1,
+   "chunks": [
+    1008848
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 454,
+   "tris": 740,
+   "copies": 1,
+   "chunks": [
+    1048176
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 637,
+   "tris": 1014,
+   "copies": 1,
+   "chunks": [
+    1116592
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 621,
+   "tris": 984,
+   "copies": 1,
+   "chunks": [
+    1171296
+   ]
+  }
+ ],
+ "aqdino_anomalo": [
+  {
+   "groups": 23,
+   "render_verts": 877,
+   "tris": 1006,
+   "copies": 1,
+   "chunks": [
+    733152
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 1052,
+   "tris": 1198,
+   "copies": 1,
+   "chunks": [
+    810512
+   ]
+  }
+ ],
+ "aqdino_basilos": [
+  {
+   "groups": 22,
+   "render_verts": 665,
+   "tris": 898,
+   "copies": 1,
+   "chunks": [
+    274192
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 804,
+   "tris": 1124,
+   "copies": 1,
+   "chunks": [
+    337536
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 701,
+   "tris": 826,
+   "copies": 1,
+   "chunks": [
+    400672
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 867,
+   "tris": 934,
+   "copies": 1,
+   "chunks": [
+    461952
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 645,
+   "tris": 980,
+   "copies": 1,
+   "chunks": [
+    516880
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 650,
+   "tris": 986,
+   "copies": 1,
+   "chunks": [
+    573120
+   ]
+  }
+ ],
+ "aqdino_colossq": [
+  {
+   "groups": 22,
+   "render_verts": 363,
+   "tris": 508,
+   "copies": 1,
+   "chunks": [
+    20800
+   ]
+  },
+  {
+   "groups": 40,
+   "render_verts": 642,
+   "tris": 832,
+   "copies": 1,
+   "chunks": [
+    62912
+   ]
+  }
+ ],
+ "aqdino_dunkleo": [
+  {
+   "groups": 12,
+   "render_verts": 351,
+   "tris": 462,
+   "copies": 2,
+   "chunks": [
+    258752,
+    286128
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 389,
+   "tris": 516,
+   "copies": 2,
+   "chunks": [
+    316352,
+    346928
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 466,
+   "tris": 534,
+   "copies": 2,
+   "chunks": [
+    380960,
+    415712
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 646,
+   "tris": 754,
+   "copies": 2,
+   "chunks": [
+    459424,
+    508192
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 374,
+   "tris": 480,
+   "copies": 2,
+   "chunks": [
+    547248,
+    578080
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 391,
+   "tris": 510,
+   "copies": 2,
+   "chunks": [
+    610848,
+    642352
+   ]
+  }
+ ],
+ "aqdino_elasmos": [
+  {
+   "groups": 24,
+   "render_verts": 615,
+   "tris": 826,
+   "copies": 1,
+   "chunks": [
+    326368
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 760,
+   "tris": 1052,
+   "copies": 1,
+   "chunks": [
+    384576
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 621,
+   "tris": 828,
+   "copies": 1,
+   "chunks": [
+    443072
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 626,
+   "tris": 838,
+   "copies": 1,
+   "chunks": [
+    496480
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 494,
+   "tris": 668,
+   "copies": 1,
+   "chunks": [
+    544048
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 532,
+   "tris": 720,
+   "copies": 1,
+   "chunks": [
+    587184
+   ]
+  }
+ ],
+ "aqdino_geosaur": [
+  {
+   "groups": 20,
+   "render_verts": 530,
+   "tris": 630,
+   "copies": 1,
+   "chunks": [
+    27536
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 673,
+   "tris": 758,
+   "copies": 1,
+   "chunks": [
+    78512
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 526,
+   "tris": 628,
+   "copies": 2,
+   "chunks": [
+    601744,
+    643744
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 640,
+   "tris": 706,
+   "copies": 2,
+   "chunks": [
+    690896,
+    740864
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 685,
+   "tris": 1000,
+   "copies": 4,
+   "chunks": [
+    798304,
+    853536,
+    909920,
+    964960
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 579,
+   "tris": 754,
+   "copies": 1,
+   "chunks": [
+    1015280
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 735,
+   "tris": 936,
+   "copies": 1,
+   "chunks": [
+    1071440
+   ]
+  }
+ ],
+ "aqdino_kronosa": [
+  {
+   "groups": 15,
+   "render_verts": 345,
+   "tris": 482,
+   "copies": 1,
+   "chunks": [
+    19984
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 416,
+   "tris": 508,
+   "copies": 1,
+   "chunks": [
+    53344
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 561,
+   "tris": 716,
+   "copies": 1,
+   "chunks": [
+    387760
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 636,
+   "tris": 820,
+   "copies": 1,
+   "chunks": [
+    439296
+   ]
+  }
+ ],
+ "aqdino_leedsic": [
+  {
+   "groups": 16,
+   "render_verts": 502,
+   "tris": 784,
+   "copies": 1,
+   "chunks": [
+    485712
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 591,
+   "tris": 932,
+   "copies": 1,
+   "chunks": [
+    533840
+   ]
+  }
+ ],
+ "aqdino_megalod": [
+  {
+   "groups": 12,
+   "render_verts": 418,
+   "tris": 568,
+   "copies": 1,
+   "chunks": [
+    22560
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 451,
+   "tris": 596,
+   "copies": 1,
+   "chunks": [
+    61184
+   ]
+  },
+  {
+   "groups": 13,
+   "render_verts": 421,
+   "tris": 588,
+   "copies": 1,
+   "chunks": [
+    101392
+   ]
+  },
+  {
+   "groups": 6,
+   "render_verts": 162,
+   "tris": 148,
+   "copies": 1,
+   "chunks": [
+    125488
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 625,
+   "tris": 780,
+   "copies": 1,
+   "chunks": [
+    159888
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 488,
+   "tris": 620,
+   "copies": 1,
+   "chunks": [
+    539648
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 597,
+   "tris": 778,
+   "copies": 1,
+   "chunks": [
+    585968
+   ]
+  }
+ ],
+ "aqdino_mosasau": [
+  {
+   "groups": 17,
+   "render_verts": 564,
+   "tris": 786,
+   "copies": 1,
+   "chunks": [
+    30448
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 570,
+   "tris": 790,
+   "copies": 1,
+   "chunks": [
+    79712
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 546,
+   "tris": 702,
+   "copies": 1,
+   "chunks": [
+    520272
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 652,
+   "tris": 786,
+   "copies": 1,
+   "chunks": [
+    570128
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 668,
+   "tris": 818,
+   "copies": 1,
+   "chunks": [
+    622496
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 814,
+   "tris": 974,
+   "copies": 1,
+   "chunks": [
+    681792
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 394,
+   "tris": 424,
+   "copies": 1,
+   "chunks": [
+    726608
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 581,
+   "tris": 690,
+   "copies": 1,
+   "chunks": [
+    766272
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 606,
+   "tris": 714,
+   "copies": 1,
+   "chunks": [
+    815152
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 700,
+   "tris": 822,
+   "copies": 1,
+   "chunks": [
+    868960
+   ]
+  }
+ ],
+ "aqdino_protosp": [
+  {
+   "groups": 9,
+   "render_verts": 219,
+   "tris": 322,
+   "copies": 3,
+   "chunks": [
+    15648,
+    33728,
+    51808
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 220,
+   "tris": 324,
+   "copies": 3,
+   "chunks": [
+    70512,
+    88768,
+    107024
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 493,
+   "tris": 726,
+   "copies": 2,
+   "chunks": [
+    139248,
+    182592
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 544,
+   "tris": 808,
+   "copies": 2,
+   "chunks": [
+    229408,
+    278320
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 487,
+   "tris": 692,
+   "copies": 3,
+   "chunks": [
+    326800,
+    368576,
+    410352
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 581,
+   "tris": 776,
+   "copies": 3,
+   "chunks": [
+    457744,
+    506640,
+    555536
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 245,
+   "tris": 332,
+   "copies": 3,
+   "chunks": [
+    900288,
+    919392,
+    938496
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 311,
+   "tris": 458,
+   "copies": 3,
+   "chunks": [
+    960736,
+    986560,
+    1012384
+   ]
+  }
+ ],
+ "aqdino_psephod": [
+  {
+   "groups": 14,
+   "render_verts": 452,
+   "tris": 602,
+   "copies": 1,
+   "chunks": [
+    24560
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 508,
+   "tris": 688,
+   "copies": 1,
+   "chunks": [
+    61728
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 558,
+   "tris": 736,
+   "copies": 1,
+   "chunks": [
+    102768
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 589,
+   "tris": 740,
+   "copies": 1,
+   "chunks": [
+    146144
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 516,
+   "tris": 726,
+   "copies": 2,
+   "chunks": [
+    901344,
+    941136
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 550,
+   "tris": 794,
+   "copies": 2,
+   "chunks": [
+    982560,
+    1025584
+   ]
+  }
+ ],
+ "aqdino_seascor": [
+  {
+   "groups": 20,
+   "render_verts": 572,
+   "tris": 838,
+   "copies": 1,
+   "chunks": [
+    33120
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 660,
+   "tris": 946,
+   "copies": 1,
+   "chunks": [
+    83040
+   ]
+  }
+ ],
+ "aqdino_shonisa": [
+  {
+   "groups": 18,
+   "render_verts": 364,
+   "tris": 550,
+   "copies": 2,
+   "chunks": [
+    21664,
+    52544
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 378,
+   "tris": 570,
+   "copies": 2,
+   "chunks": [
+    85200,
+    116608
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 559,
+   "tris": 902,
+   "copies": 1,
+   "chunks": [
+    156512
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 557,
+   "tris": 902,
+   "copies": 1,
+   "chunks": [
+    208992
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 407,
+   "tris": 630,
+   "copies": 1,
+   "chunks": [
+    587760
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 501,
+   "tris": 786,
+   "copies": 1,
+   "chunks": [
+    626400
+   ]
+  }
+ ],
+ "aqdino_trinacr": [
+  {
+   "groups": 18,
+   "render_verts": 603,
+   "tris": 842,
+   "copies": 1,
+   "chunks": [
+    31440
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 698,
+   "tris": 920,
+   "copies": 1,
+   "chunks": [
+    89200
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 590,
+   "tris": 720,
+   "copies": 1,
+   "chunks": [
+    145792
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 638,
+   "tris": 792,
+   "copies": 1,
+   "chunks": [
+    197568
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 568,
+   "tris": 682,
+   "copies": 1,
+   "chunks": [
+    431440
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 655,
+   "tris": 852,
+   "copies": 1,
+   "chunks": [
+    482704
+   ]
+  }
+ ],
+ "arbattledino_amebelo": [
+  {
+   "groups": 23,
+   "render_verts": 2144,
+   "tris": 3698,
+   "copies": 1,
+   "chunks": [
+    1400816
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 2510,
+   "tris": 4352,
+   "copies": 1,
+   "chunks": [
+    1605264
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 2605,
+   "tris": 4248,
+   "copies": 1,
+   "chunks": [
+    1830896
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 2394,
+   "tris": 4160,
+   "copies": 1,
+   "chunks": [
+    2047872
+   ]
+  }
+ ],
+ "arbattledino_andrews": [
+  {
+   "groups": 26,
+   "render_verts": 1925,
+   "tris": 3326,
+   "copies": 1,
+   "chunks": [
+    1563104
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 1956,
+   "tris": 3338,
+   "copies": 1,
+   "chunks": [
+    1744112
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 1966,
+   "tris": 3286,
+   "copies": 1,
+   "chunks": [
+    1920544
+   ]
+  }
+ ],
+ "arbattledino_dodobir": [
+  {
+   "groups": 18,
+   "render_verts": 2285,
+   "tris": 3482,
+   "copies": 1,
+   "chunks": [
+    360304
+   ]
+  }
+ ],
+ "arbattledino_elasmot": [
+  {
+   "groups": 24,
+   "render_verts": 2331,
+   "tris": 4002,
+   "copies": 1,
+   "chunks": [
+    406048
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2274,
+   "tris": 3728,
+   "copies": 1,
+   "chunks": [
+    608112
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2036,
+   "tris": 3468,
+   "copies": 1,
+   "chunks": [
+    794784
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 1575,
+   "tris": 2478,
+   "copies": 1,
+   "chunks": [
+    953984
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2375,
+   "tris": 4004,
+   "copies": 1,
+   "chunks": [
+    1129200
+   ]
+  }
+ ],
+ "arbattledino_entelod": [
+  {
+   "groups": 24,
+   "render_verts": 2137,
+   "tris": 3594,
+   "copies": 1,
+   "chunks": [
+    331520
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2743,
+   "tris": 3712,
+   "copies": 1,
+   "chunks": [
+    543952
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2134,
+   "tris": 3700,
+   "copies": 1,
+   "chunks": [
+    738416
+   ]
+  }
+ ],
+ "arbattledino_eremoth": [
+  {
+   "groups": 24,
+   "render_verts": 2381,
+   "tris": 3960,
+   "copies": 1,
+   "chunks": [
+    328752
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 2855,
+   "tris": 4062,
+   "copies": 1,
+   "chunks": [
+    553648
+   ]
+  }
+ ],
+ "arbattledino_giganto": [
+  {
+   "groups": 33,
+   "render_verts": 3580,
+   "tris": 6014,
+   "copies": 1,
+   "chunks": [
+    484592
+   ]
+  }
+ ],
+ "arbattledino_indrico": [
+  {
+   "groups": 25,
+   "render_verts": 2154,
+   "tris": 3600,
+   "copies": 1,
+   "chunks": [
+    323552
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 2184,
+   "tris": 3880,
+   "copies": 1,
+   "chunks": [
+    517504
+   ]
+  }
+ ],
+ "arbattledino_macrauc": [
+  {
+   "groups": 27,
+   "render_verts": 2858,
+   "tris": 3854,
+   "copies": 1,
+   "chunks": [
+    372928
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2706,
+   "tris": 4432,
+   "copies": 1,
+   "chunks": [
+    595456
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2361,
+   "tris": 4048,
+   "copies": 1,
+   "chunks": [
+    811504
+   ]
+  }
+ ],
+ "arbattledino_megalan": [
+  {
+   "groups": 27,
+   "render_verts": 2034,
+   "tris": 3050,
+   "copies": 1,
+   "chunks": [
+    372240
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 1678,
+   "tris": 2718,
+   "copies": 1,
+   "chunks": [
+    539664
+   ]
+  }
+ ],
+ "arbattledino_pelteph": [
+  {
+   "groups": 22,
+   "render_verts": 2402,
+   "tris": 4078,
+   "copies": 1,
+   "chunks": [
+    319392
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 2327,
+   "tris": 3728,
+   "copies": 1,
+   "chunks": [
+    523600
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2050,
+   "tris": 3508,
+   "copies": 1,
+   "chunks": [
+    708848
+   ]
+  }
+ ],
+ "arbattledino_procopt": [
+  {
+   "groups": 27,
+   "render_verts": 2302,
+   "tris": 3940,
+   "copies": 1,
+   "chunks": [
+    313488
+   ]
+  }
+ ],
+ "arbattledino_sarkast": [
+  {
+   "groups": 22,
+   "render_verts": 2195,
+   "tris": 3762,
+   "copies": 1,
+   "chunks": [
+    373536
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2433,
+   "tris": 3916,
+   "copies": 1,
+   "chunks": [
+    584624
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 2414,
+   "tris": 3922,
+   "copies": 1,
+   "chunks": [
+    794480
+   ]
+  }
+ ],
+ "arbattledino_smilodo": [
+  {
+   "groups": 26,
+   "render_verts": 2780,
+   "tris": 4088,
+   "copies": 1,
+   "chunks": [
+    693952
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 2302,
+   "tris": 3636,
+   "copies": 1,
+   "chunks": [
+    907504
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 2281,
+   "tris": 3810,
+   "copies": 1,
+   "chunks": [
+    1106144
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 2213,
+   "tris": 3786,
+   "copies": 1,
+   "chunks": [
+    1306192
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2349,
+   "tris": 3952,
+   "copies": 1,
+   "chunks": [
+    1509360
+   ]
+  }
+ ],
+ "arbattledino_terrorb": [
+  {
+   "groups": 20,
+   "render_verts": 2520,
+   "tris": 3862,
+   "copies": 1,
+   "chunks": [
+    355696
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2163,
+   "tris": 3608,
+   "copies": 1,
+   "chunks": [
+    556512
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1799,
+   "tris": 2962,
+   "copies": 1,
+   "chunks": [
+    729600
+   ]
+  }
+ ],
+ "arbattledino_titanob": [
+  {
+   "groups": 23,
+   "render_verts": 3174,
+   "tris": 4796,
+   "copies": 1,
+   "chunks": [
+    537856
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 2001,
+   "tris": 3502,
+   "copies": 1,
+   "chunks": [
+    787296
+   ]
+  }
+ ],
+ "ardino_amebelo": [
+  {
+   "groups": 22,
+   "render_verts": 585,
+   "tris": 856,
+   "copies": 1,
+   "chunks": [
+    1034576
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 663,
+   "tris": 934,
+   "copies": 1,
+   "chunks": [
+    1085872
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 623,
+   "tris": 954,
+   "copies": 1,
+   "chunks": [
+    1138368
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 659,
+   "tris": 1014,
+   "copies": 1,
+   "chunks": [
+    1192688
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 716,
+   "tris": 992,
+   "copies": 1,
+   "chunks": [
+    1250336
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 725,
+   "tris": 998,
+   "copies": 1,
+   "chunks": [
+    1320864
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 531,
+   "tris": 784,
+   "copies": 1,
+   "chunks": [
+    1372096
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 658,
+   "tris": 1000,
+   "copies": 1,
+   "chunks": [
+    1421472
+   ]
+  }
+ ],
+ "ardino_andrews": [
+  {
+   "groups": 26,
+   "render_verts": 557,
+   "tris": 806,
+   "copies": 4,
+   "chunks": [
+    785440,
+    831664,
+    879040,
+    925136
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 479,
+   "tris": 720,
+   "copies": 1,
+   "chunks": [
+    1202528
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 627,
+   "tris": 870,
+   "copies": 1,
+   "chunks": [
+    1248816
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 746,
+   "tris": 894,
+   "copies": 1,
+   "chunks": [
+    1305856
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 709,
+   "tris": 1028,
+   "copies": 1,
+   "chunks": [
+    1364096
+   ]
+  }
+ ],
+ "ardino_dodobir": [
+  {
+   "groups": 18,
+   "render_verts": 583,
+   "tris": 738,
+   "copies": 3,
+   "chunks": [
+    193616,
+    239952,
+    286288
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 581,
+   "tris": 730,
+   "copies": 3,
+   "chunks": [
+    333072,
+    379264,
+    426032
+   ]
+  }
+ ],
+ "ardino_elasmot": [
+  {
+   "groups": 24,
+   "render_verts": 651,
+   "tris": 942,
+   "copies": 1,
+   "chunks": [
+    33760
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 669,
+   "tris": 974,
+   "copies": 1,
+   "chunks": [
+    87312
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 619,
+   "tris": 760,
+   "copies": 1,
+   "chunks": [
+    138560
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 732,
+   "tris": 962,
+   "copies": 1,
+   "chunks": [
+    194176
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 481,
+   "tris": 644,
+   "copies": 1,
+   "chunks": [
+    593040
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 531,
+   "tris": 784,
+   "copies": 1,
+   "chunks": [
+    634016
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 578,
+   "tris": 772,
+   "copies": 1,
+   "chunks": [
+    680736
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 587,
+   "tris": 784,
+   "copies": 1,
+   "chunks": [
+    727904
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 558,
+   "tris": 828,
+   "copies": 1,
+   "chunks": [
+    774672
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 706,
+   "tris": 988,
+   "copies": 1,
+   "chunks": [
+    827280
+   ]
+  }
+ ],
+ "ardino_entelod": [
+  {
+   "groups": 24,
+   "render_verts": 605,
+   "tris": 788,
+   "copies": 1,
+   "chunks": [
+    30608
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 608,
+   "tris": 788,
+   "copies": 1,
+   "chunks": [
+    84144
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 488,
+   "tris": 696,
+   "copies": 1,
+   "chunks": [
+    132752
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 677,
+   "tris": 926,
+   "copies": 1,
+   "chunks": [
+    180768
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 487,
+   "tris": 684,
+   "copies": 1,
+   "chunks": [
+    489008
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 623,
+   "tris": 924,
+   "copies": 1,
+   "chunks": [
+    534800
+   ]
+  }
+ ],
+ "ardino_eremoth": [
+  {
+   "groups": 24,
+   "render_verts": 625,
+   "tris": 852,
+   "copies": 1,
+   "chunks": [
+    32288
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 680,
+   "tris": 930,
+   "copies": 1,
+   "chunks": [
+    85344
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 613,
+   "tris": 854,
+   "copies": 1,
+   "chunks": [
+    356048
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 701,
+   "tris": 972,
+   "copies": 1,
+   "chunks": [
+    409936
+   ]
+  }
+ ],
+ "ardino_giganto": [
+  {
+   "groups": 31,
+   "render_verts": 998,
+   "tris": 1454,
+   "copies": 1,
+   "chunks": [
+    276016
+   ]
+  },
+  {
+   "groups": 31,
+   "render_verts": 982,
+   "tris": 1454,
+   "copies": 1,
+   "chunks": [
+    357712
+   ]
+  }
+ ],
+ "ardino_indrico": [
+  {
+   "groups": 24,
+   "render_verts": 624,
+   "tris": 918,
+   "copies": 1,
+   "chunks": [
+    32656
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 640,
+   "tris": 950,
+   "copies": 1,
+   "chunks": [
+    85728
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 586,
+   "tris": 900,
+   "copies": 1,
+   "chunks": [
+    373216
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 596,
+   "tris": 912,
+   "copies": 1,
+   "chunks": [
+    422784
+   ]
+  }
+ ],
+ "ardino_macrauc": [
+  {
+   "groups": 25,
+   "render_verts": 505,
+   "tris": 794,
+   "copies": 2,
+   "chunks": [
+    317536,
+    360848
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 570,
+   "tris": 890,
+   "copies": 1,
+   "chunks": [
+    407088
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 622,
+   "tris": 922,
+   "copies": 1,
+   "chunks": [
+    457392
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 678,
+   "tris": 926,
+   "copies": 1,
+   "chunks": [
+    511664
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 748,
+   "tris": 994,
+   "copies": 1,
+   "chunks": [
+    568224
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 624,
+   "tris": 900,
+   "copies": 2,
+   "chunks": [
+    621360,
+    671488
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 665,
+   "tris": 958,
+   "copies": 2,
+   "chunks": [
+    724592,
+    777728
+   ]
+  }
+ ],
+ "ardino_megalan": [
+  {
+   "groups": 26,
+   "render_verts": 808,
+   "tris": 950,
+   "copies": 1,
+   "chunks": [
+    39472
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 826,
+   "tris": 956,
+   "copies": 1,
+   "chunks": [
+    107040
+   ]
+  },
+  {
+   "groups": 28,
+   "render_verts": 546,
+   "tris": 662,
+   "copies": 1,
+   "chunks": [
+    390144
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 555,
+   "tris": 698,
+   "copies": 1,
+   "chunks": [
+    435024
+   ]
+  }
+ ],
+ "ardino_pelteph": [
+  {
+   "groups": 17,
+   "render_verts": 580,
+   "tris": 824,
+   "copies": 1,
+   "chunks": [
+    207008
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 637,
+   "tris": 918,
+   "copies": 1,
+   "chunks": [
+    256448
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 894,
+   "tris": 1222,
+   "copies": 3,
+   "chunks": [
+    320384,
+    388736,
+    457088
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1014,
+   "tris": 1450,
+   "copies": 3,
+   "chunks": [
+    531136,
+    611120,
+    691104
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 648,
+   "tris": 816,
+   "copies": 3,
+   "chunks": [
+    1110576,
+    1159856,
+    1209136
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 669,
+   "tris": 844,
+   "copies": 1,
+   "chunks": [
+    1259344
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 669,
+   "tris": 844,
+   "copies": 2,
+   "chunks": [
+    1311744,
+    1362288
+   ]
+  }
+ ],
+ "ardino_procopt": [
+  {
+   "groups": 26,
+   "render_verts": 696,
+   "tris": 940,
+   "copies": 1,
+   "chunks": [
+    204720
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 630,
+   "tris": 918,
+   "copies": 1,
+   "chunks": [
+    257744
+   ]
+  }
+ ],
+ "ardino_sarkast": [
+  {
+   "groups": 22,
+   "render_verts": 552,
+   "tris": 788,
+   "copies": 1,
+   "chunks": [
+    28704
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 555,
+   "tris": 792,
+   "copies": 1,
+   "chunks": [
+    78144
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 791,
+   "tris": 974,
+   "copies": 1,
+   "chunks": [
+    137296
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 789,
+   "tris": 972,
+   "copies": 1,
+   "chunks": [
+    199360
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 724,
+   "tris": 832,
+   "copies": 1,
+   "chunks": [
+    494544
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 788,
+   "tris": 944,
+   "copies": 1,
+   "chunks": [
+    552224
+   ]
+  }
+ ],
+ "ardino_smilodo": [
+  {
+   "groups": 24,
+   "render_verts": 854,
+   "tris": 1018,
+   "copies": 1,
+   "chunks": [
+    328896
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 1092,
+   "tris": 1226,
+   "copies": 1,
+   "chunks": [
+    405488
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 722,
+   "tris": 888,
+   "copies": 1,
+   "chunks": [
+    477664
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 776,
+   "tris": 978,
+   "copies": 1,
+   "chunks": [
+    535312
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 538,
+   "tris": 738,
+   "copies": 1,
+   "chunks": [
+    585872
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 756,
+   "tris": 948,
+   "copies": 1,
+   "chunks": [
+    638016
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 511,
+   "tris": 740,
+   "copies": 2,
+   "chunks": [
+    1193136,
+    1235392
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 693,
+   "tris": 928,
+   "copies": 2,
+   "chunks": [
+    1285328,
+    1340160
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 683,
+   "tris": 902,
+   "copies": 2,
+   "chunks": [
+    1396768,
+    1449952
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 721,
+   "tris": 978,
+   "copies": 2,
+   "chunks": [
+    1506112,
+    1562752
+   ]
+  }
+ ],
+ "ardino_terrorb": [
+  {
+   "groups": 20,
+   "render_verts": 638,
+   "tris": 756,
+   "copies": 1,
+   "chunks": [
+    32752
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 644,
+   "tris": 761,
+   "copies": 1,
+   "chunks": [
+    85344
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 689,
+   "tris": 816,
+   "copies": 1,
+   "chunks": [
+    141296
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 695,
+   "tris": 821,
+   "copies": 1,
+   "chunks": [
+    198384
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 594,
+   "tris": 796,
+   "copies": 2,
+   "chunks": [
+    253072,
+    302224
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 626,
+   "tris": 852,
+   "copies": 2,
+   "chunks": [
+    354016,
+    405856
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 493,
+   "tris": 696,
+   "copies": 2,
+   "chunks": [
+    863888,
+    902816
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 526,
+   "tris": 728,
+   "copies": 2,
+   "chunks": [
+    943120,
+    985552
+   ]
+  }
+ ],
+ "ardino_titanob": [
+  {
+   "groups": 23,
+   "render_verts": 2349,
+   "tris": 3142,
+   "copies": 1,
+   "chunks": [
+    107520
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 2358,
+   "tris": 3158,
+   "copies": 1,
+   "chunks": [
+    320000
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 481,
+   "tris": 762,
+   "copies": 1,
+   "chunks": [
+    766160
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 542,
+   "tris": 850,
+   "copies": 1,
+   "chunks": [
+    813008
+   ]
+  }
+ ],
+ "subattledino_ankylos": [
+  {
+   "groups": 24,
+   "render_verts": 2511,
+   "tris": 3468,
+   "copies": 1,
+   "chunks": [
+    893504
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 2315,
+   "tris": 3890,
+   "copies": 1,
+   "chunks": [
+    1097472
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 748,
+   "tris": 900,
+   "copies": 1,
+   "chunks": [
+    1449552
+   ]
+  }
+ ],
+ "subattledino_brachio": [
+  {
+   "groups": 27,
+   "render_verts": 1715,
+   "tris": 2672,
+   "copies": 1,
+   "chunks": [
+    1228576
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 1711,
+   "tris": 2892,
+   "copies": 1,
+   "chunks": [
+    1381008
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 1949,
+   "tris": 2938,
+   "copies": 1,
+   "chunks": [
+    1551760
+   ]
+  },
+  {
+   "groups": 13,
+   "render_verts": 368,
+   "tris": 526,
+   "copies": 1,
+   "chunks": [
+    2069936
+   ]
+  },
+  {
+   "groups": 11,
+   "render_verts": 407,
+   "tris": 479,
+   "copies": 1,
+   "chunks": [
+    2110576
+   ]
+  }
+ ],
+ "subattledino_brontos": [
+  {
+   "groups": 29,
+   "render_verts": 2119,
+   "tris": 3524,
+   "copies": 1,
+   "chunks": [
+    1173264
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 1833,
+   "tris": 2996,
+   "copies": 1,
+   "chunks": [
+    1363248
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 2091,
+   "tris": 3136,
+   "copies": 1,
+   "chunks": [
+    1545216
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 261,
+   "tris": 428,
+   "copies": 1,
+   "chunks": [
+    1999952
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 314,
+   "tris": 512,
+   "copies": 1,
+   "chunks": [
+    2036032
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 235,
+   "tris": 352,
+   "copies": 1,
+   "chunks": [
+    2071456
+   ]
+  }
+ ],
+ "subattledino_ceratos": [
+  {
+   "groups": 20,
+   "render_verts": 1706,
+   "tris": 2732,
+   "copies": 1,
+   "chunks": [
+    867968
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1642,
+   "tris": 2424,
+   "copies": 1,
+   "chunks": [
+    1012352
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2113,
+   "tris": 2658,
+   "copies": 1,
+   "chunks": [
+    1168592
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1637,
+   "tris": 2538,
+   "copies": 1,
+   "chunks": [
+    1313312
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 2168,
+   "tris": 2640,
+   "copies": 1,
+   "chunks": [
+    1473232
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 805,
+   "tris": 1260,
+   "copies": 1,
+   "chunks": [
+    1741344
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 776,
+   "tris": 1122,
+   "copies": 1,
+   "chunks": [
+    1814640
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 1183,
+   "tris": 1614,
+   "copies": 1,
+   "chunks": [
+    1902160
+   ]
+  },
+  {
+   "groups": 8,
+   "render_verts": 500,
+   "tris": 778,
+   "copies": 1,
+   "chunks": [
+    1971552
+   ]
+  },
+  {
+   "groups": 11,
+   "render_verts": 808,
+   "tris": 938,
+   "copies": 1,
+   "chunks": [
+    2032512
+   ]
+  }
+ ],
+ "subattledino_corytho": [
+  {
+   "groups": 25,
+   "render_verts": 1900,
+   "tris": 2968,
+   "copies": 1,
+   "chunks": [
+    991984
+   ]
+  },
+  {
+   "groups": 13,
+   "render_verts": 281,
+   "tris": 448,
+   "copies": 1,
+   "chunks": [
+    1604320
+   ]
+  }
+ ],
+ "subattledino_dilopho": [
+  {
+   "groups": 28,
+   "render_verts": 1728,
+   "tris": 2552,
+   "copies": 1,
+   "chunks": [
+    1012720
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 806,
+   "tris": 1100,
+   "copies": 1,
+   "chunks": [
+    1164048
+   ]
+  }
+ ],
+ "subattledino_gallimi": [
+  {
+   "groups": 22,
+   "render_verts": 1617,
+   "tris": 2548,
+   "copies": 1,
+   "chunks": [
+    77600
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 1565,
+   "tris": 2492,
+   "copies": 1,
+   "chunks": [
+    212096
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 253,
+   "tris": 396,
+   "copies": 1,
+   "chunks": [
+    620640
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 220,
+   "tris": 352,
+   "copies": 1,
+   "chunks": [
+    646752
+   ]
+  }
+ ],
+ "subattledino_indomin": [
+  {
+   "groups": 20,
+   "render_verts": 3073,
+   "tris": 4580,
+   "copies": 1,
+   "chunks": [
+    142784
+   ]
+  },
+  {
+   "groups": 13,
+   "render_verts": 724,
+   "tris": 1210,
+   "copies": 1,
+   "chunks": [
+    349536
+   ]
+  }
+ ],
+ "subattledino_pachyce": [
+  {
+   "groups": 21,
+   "render_verts": 1498,
+   "tris": 2420,
+   "copies": 1,
+   "chunks": [
+    72544
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 909,
+   "tris": 1420,
+   "copies": 1,
+   "chunks": [
+    635232
+   ]
+  }
+ ],
+ "subattledino_parasau": [
+  {
+   "groups": 26,
+   "render_verts": 2026,
+   "tris": 2644,
+   "copies": 1,
+   "chunks": [
+    95840
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 1695,
+   "tris": 2836,
+   "copies": 1,
+   "chunks": [
+    242352
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 2162,
+   "tris": 2800,
+   "copies": 1,
+   "chunks": [
+    404640
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 458,
+   "tris": 568,
+   "copies": 1,
+   "chunks": [
+    645600
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 367,
+   "tris": 596,
+   "copies": 1,
+   "chunks": [
+    685360
+   ]
+  },
+  {
+   "groups": 16,
+   "render_verts": 1286,
+   "tris": 1614,
+   "copies": 1,
+   "chunks": [
+    765168
+   ]
+  }
+ ],
+ "subattledino_pterano": [
+  {
+   "groups": 21,
+   "render_verts": 1327,
+   "tris": 2000,
+   "copies": 4,
+   "chunks": [
+    63872,
+    172320,
+    1336560,
+    1450560
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1364,
+   "tris": 2160,
+   "copies": 1,
+   "chunks": [
+    283632
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 411,
+   "tris": 548,
+   "copies": 1,
+   "chunks": [
+    1527216
+   ]
+  }
+ ],
+ "subattledino_spinosa": [
+  {
+   "groups": 21,
+   "render_verts": 1577,
+   "tris": 2410,
+   "copies": 1,
+   "chunks": [
+    75328
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 2912,
+   "tris": 3474,
+   "copies": 1,
+   "chunks": [
+    261824
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1761,
+   "tris": 2676,
+   "copies": 1,
+   "chunks": [
+    439952
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1801,
+   "tris": 2622,
+   "copies": 1,
+   "chunks": [
+    590544
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 4265,
+   "tris": 5892,
+   "copies": 1,
+   "chunks": [
+    851296
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 921,
+   "tris": 1540,
+   "copies": 1,
+   "chunks": [
+    1134400
+   ]
+  },
+  {
+   "groups": 8,
+   "render_verts": 898,
+   "tris": 1086,
+   "copies": 1,
+   "chunks": [
+    1216000
+   ]
+  },
+  {
+   "groups": 11,
+   "render_verts": 647,
+   "tris": 947,
+   "copies": 1,
+   "chunks": [
+    1284928
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 221,
+   "tris": 248,
+   "copies": 1,
+   "chunks": [
+    1326816
+   ]
+  },
+  {
+   "groups": 9,
+   "render_verts": 420,
+   "tris": 565,
+   "copies": 1,
+   "chunks": [
+    1362384
+   ]
+  }
+ ],
+ "subattledino_stegosa": [
+  {
+   "groups": 23,
+   "render_verts": 1401,
+   "tris": 2000,
+   "copies": 1,
+   "chunks": [
+    67120
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1928,
+   "tris": 2736,
+   "copies": 1,
+   "chunks": [
+    204080
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 3347,
+   "tris": 4136,
+   "copies": 1,
+   "chunks": [
+    422192
+   ]
+  },
+  {
+   "groups": 17,
+   "render_verts": 272,
+   "tris": 422,
+   "copies": 1,
+   "chunks": [
+    793232
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 592,
+   "tris": 716,
+   "copies": 1,
+   "chunks": [
+    838048
+   ]
+  },
+  {
+   "groups": 11,
+   "render_verts": 1014,
+   "tris": 1178,
+   "copies": 1,
+   "chunks": [
+    910176
+   ]
+  }
+ ],
+ "subattledino_tricera": [
+  {
+   "groups": 23,
+   "render_verts": 1630,
+   "tris": 2616,
+   "copies": 1,
+   "chunks": [
+    79056
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1929,
+   "tris": 3240,
+   "copies": 1,
+   "chunks": [
+    233472
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1630,
+   "tris": 2764,
+   "copies": 1,
+   "chunks": [
+    390288
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 1570,
+   "tris": 2518,
+   "copies": 1,
+   "chunks": [
+    528224
+   ]
+  },
+  {
+   "groups": 10,
+   "render_verts": 221,
+   "tris": 270,
+   "copies": 1,
+   "chunks": [
+    780720
+   ]
+  },
+  {
+   "groups": 13,
+   "render_verts": 1195,
+   "tris": 1928,
+   "copies": 1,
+   "chunks": [
+    849872
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 601,
+   "tris": 914,
+   "copies": 1,
+   "chunks": [
+    928928
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 578,
+   "tris": 886,
+   "copies": 1,
+   "chunks": [
+    986000
+   ]
+  }
+ ],
+ "subattledino_tyranno": [
+  {
+   "groups": 20,
+   "render_verts": 2052,
+   "tris": 3126,
+   "copies": 1,
+   "chunks": [
+    99232
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1665,
+   "tris": 2638,
+   "copies": 1,
+   "chunks": [
+    256400
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 1559,
+   "tris": 2458,
+   "copies": 1,
+   "chunks": [
+    399776
+   ]
+  },
+  {
+   "groups": 11,
+   "render_verts": 288,
+   "tris": 312,
+   "copies": 1,
+   "chunks": [
+    1171664
+   ]
+  },
+  {
+   "groups": 15,
+   "render_verts": 234,
+   "tris": 287,
+   "copies": 1,
+   "chunks": [
+    1198304
+   ]
+  },
+  {
+   "groups": 9,
+   "render_verts": 343,
+   "tris": 523,
+   "copies": 1,
+   "chunks": [
+    1225200
+   ]
+  }
+ ],
+ "subattledino_velocir": [
+  {
+   "groups": 25,
+   "render_verts": 1585,
+   "tris": 2406,
+   "copies": 3,
+   "chunks": [
+    75600,
+    215840,
+    356080
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 2230,
+   "tris": 2882,
+   "copies": 3,
+   "chunks": [
+    524240,
+    693536,
+    862832
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 2468,
+   "tris": 3702,
+   "copies": 3,
+   "chunks": [
+    1049072,
+    1258832,
+    1468592
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 1824,
+   "tris": 2686,
+   "copies": 3,
+   "chunks": [
+    1649072,
+    1798768,
+    1948464
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 168,
+   "tris": 262,
+   "copies": 1,
+   "chunks": [
+    2088880
+   ]
+  },
+  {
+   "groups": 12,
+   "render_verts": 622,
+   "tris": 714,
+   "copies": 1,
+   "chunks": [
+    2133168
+   ]
+  },
+  {
+   "groups": 14,
+   "render_verts": 272,
+   "tris": 452,
+   "copies": 1,
+   "chunks": [
+    2173632
+   ]
+  }
+ ],
+ "sudino_ankylos": [
+  {
+   "groups": 24,
+   "render_verts": 271,
+   "tris": 402,
+   "copies": 1,
+   "chunks": [
+    407824
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 407,
+   "tris": 530,
+   "copies": 1,
+   "chunks": [
+    436400
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 561,
+   "tris": 800,
+   "copies": 1,
+   "chunks": [
+    478416
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 652,
+   "tris": 884,
+   "copies": 1,
+   "chunks": [
+    534640
+   ]
+  }
+ ],
+ "sudino_brachio": [
+  {
+   "groups": 25,
+   "render_verts": 398,
+   "tris": 618,
+   "copies": 1,
+   "chunks": [
+    683168
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 651,
+   "tris": 794,
+   "copies": 1,
+   "chunks": [
+    727840
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 637,
+   "tris": 928,
+   "copies": 1,
+   "chunks": [
+    781344
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 677,
+   "tris": 964,
+   "copies": 1,
+   "chunks": [
+    839840
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 595,
+   "tris": 838,
+   "copies": 1,
+   "chunks": [
+    897472
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 776,
+   "tris": 950,
+   "copies": 1,
+   "chunks": [
+    956224
+   ]
+  }
+ ],
+ "sudino_brontos": [
+  {
+   "groups": 28,
+   "render_verts": 451,
+   "tris": 666,
+   "copies": 1,
+   "chunks": [
+    215408
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 739,
+   "tris": 944,
+   "copies": 1,
+   "chunks": [
+    265696
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 387,
+   "tris": 610,
+   "copies": 1,
+   "chunks": [
+    312224
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 678,
+   "tris": 936,
+   "copies": 1,
+   "chunks": [
+    358960
+   ]
+  },
+  {
+   "groups": 27,
+   "render_verts": 356,
+   "tris": 544,
+   "copies": 1,
+   "chunks": [
+    404160
+   ]
+  },
+  {
+   "groups": 29,
+   "render_verts": 710,
+   "tris": 950,
+   "copies": 1,
+   "chunks": [
+    450736
+   ]
+  }
+ ],
+ "sudino_ceratos": [
+  {
+   "groups": 20,
+   "render_verts": 318,
+   "tris": 400,
+   "copies": 1,
+   "chunks": [
+    651872
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 468,
+   "tris": 576,
+   "copies": 1,
+   "chunks": [
+    685168
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 323,
+   "tris": 416,
+   "copies": 1,
+   "chunks": [
+    717328
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 443,
+   "tris": 516,
+   "copies": 1,
+   "chunks": [
+    749664
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 333,
+   "tris": 412,
+   "copies": 1,
+   "chunks": [
+    781232
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 470,
+   "tris": 546,
+   "copies": 1,
+   "chunks": [
+    814480
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 329,
+   "tris": 420,
+   "copies": 1,
+   "chunks": [
+    846352
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 429,
+   "tris": 552,
+   "copies": 1,
+   "chunks": [
+    878400
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 352,
+   "tris": 426,
+   "copies": 1,
+   "chunks": [
+    910416
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 390,
+   "tris": 484,
+   "copies": 1,
+   "chunks": [
+    940736
+   ]
+  }
+ ],
+ "sudino_corytho": [
+  {
+   "groups": 24,
+   "render_verts": 315,
+   "tris": 452,
+   "copies": 1,
+   "chunks": [
+    459920
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 390,
+   "tris": 566,
+   "copies": 1,
+   "chunks": [
+    489312
+   ]
+  }
+ ],
+ "sudino_dilopho": [
+  {
+   "groups": 20,
+   "render_verts": 320,
+   "tris": 380,
+   "copies": 1,
+   "chunks": [
+    1296864
+   ]
+  },
+  {
+   "groups": 28,
+   "render_verts": 502,
+   "tris": 532,
+   "copies": 1,
+   "chunks": [
+    1329744
+   ]
+  }
+ ],
+ "sudino_gallimi": [
+  {
+   "groups": 21,
+   "render_verts": 275,
+   "tris": 424,
+   "copies": 2,
+   "chunks": [
+    17728,
+    41328
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 343,
+   "tris": 512,
+   "copies": 2,
+   "chunks": [
+    69024,
+    97360
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 286,
+   "tris": 424,
+   "copies": 2,
+   "chunks": [
+    124272,
+    148416
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 351,
+   "tris": 500,
+   "copies": 2,
+   "chunks": [
+    175360,
+    204192
+   ]
+  }
+ ],
+ "sudino_indomin": [
+  {
+   "groups": 19,
+   "render_verts": 819,
+   "tris": 1138,
+   "copies": 1,
+   "chunks": [
+    40416
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 933,
+   "tris": 1214,
+   "copies": 1,
+   "chunks": [
+    114320
+   ]
+  }
+ ],
+ "sudino_pachyce": [
+  {
+   "groups": 21,
+   "render_verts": 246,
+   "tris": 364,
+   "copies": 2,
+   "chunks": [
+    16288,
+    36832
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 337,
+   "tris": 458,
+   "copies": 2,
+   "chunks": [
+    61216,
+    88272
+   ]
+  }
+ ],
+ "sudino_parasau": [
+  {
+   "groups": 25,
+   "render_verts": 287,
+   "tris": 436,
+   "copies": 1,
+   "chunks": [
+    17632
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 340,
+   "tris": 532,
+   "copies": 1,
+   "chunks": [
+    45456
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 321,
+   "tris": 488,
+   "copies": 1,
+   "chunks": [
+    73936
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 393,
+   "tris": 590,
+   "copies": 1,
+   "chunks": [
+    105264
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 287,
+   "tris": 430,
+   "copies": 1,
+   "chunks": [
+    133472
+   ]
+  },
+  {
+   "groups": 26,
+   "render_verts": 378,
+   "tris": 612,
+   "copies": 1,
+   "chunks": [
+    161936
+   ]
+  }
+ ],
+ "sudino_pterano": [
+  {
+   "groups": 19,
+   "render_verts": 379,
+   "tris": 450,
+   "copies": 4,
+   "chunks": [
+    21600,
+    49312,
+    134784,
+    162496
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 378,
+   "tris": 448,
+   "copies": 4,
+   "chunks": [
+    76976,
+    104704,
+    191312,
+    219040
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 403,
+   "tris": 522,
+   "copies": 1,
+   "chunks": [
+    248688
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 411,
+   "tris": 548,
+   "copies": 1,
+   "chunks": [
+    280000
+   ]
+  }
+ ],
+ "sudino_spinosa": [
+  {
+   "groups": 20,
+   "render_verts": 423,
+   "tris": 476,
+   "copies": 1,
+   "chunks": [
+    22768
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 438,
+   "tris": 502,
+   "copies": 1,
+   "chunks": [
+    57776
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 429,
+   "tris": 524,
+   "copies": 1,
+   "chunks": [
+    93040
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 679,
+   "tris": 711,
+   "copies": 1,
+   "chunks": [
+    139056
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 390,
+   "tris": 450,
+   "copies": 1,
+   "chunks": [
+    180992
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 529,
+   "tris": 588,
+   "copies": 1,
+   "chunks": [
+    216896
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 517,
+   "tris": 522,
+   "copies": 1,
+   "chunks": [
+    257840
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 609,
+   "tris": 662,
+   "copies": 1,
+   "chunks": [
+    303392
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 429,
+   "tris": 500,
+   "copies": 1,
+   "chunks": [
+    346544
+   ]
+  },
+  {
+   "groups": 21,
+   "render_verts": 1215,
+   "tris": 1186,
+   "copies": 1,
+   "chunks": [
+    413152
+   ]
+  }
+ ],
+ "sudino_stegosa": [
+  {
+   "groups": 22,
+   "render_verts": 267,
+   "tris": 390,
+   "copies": 1,
+   "chunks": [
+    16624
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 290,
+   "tris": 444,
+   "copies": 1,
+   "chunks": [
+    41136
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 314,
+   "tris": 398,
+   "copies": 1,
+   "chunks": [
+    66928
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 422,
+   "tris": 500,
+   "copies": 1,
+   "chunks": [
+    97936
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 349,
+   "tris": 486,
+   "copies": 1,
+   "chunks": [
+    131504
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 719,
+   "tris": 884,
+   "copies": 1,
+   "chunks": [
+    176624
+   ]
+  }
+ ],
+ "sudino_tricera": [
+  {
+   "groups": 22,
+   "render_verts": 349,
+   "tris": 498,
+   "copies": 1,
+   "chunks": [
+    20224
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 434,
+   "tris": 644,
+   "copies": 1,
+   "chunks": [
+    53088
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 321,
+   "tris": 472,
+   "copies": 1,
+   "chunks": [
+    84096
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 512,
+   "tris": 750,
+   "copies": 1,
+   "chunks": [
+    120128
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 338,
+   "tris": 498,
+   "copies": 1,
+   "chunks": [
+    154384
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 421,
+   "tris": 626,
+   "copies": 1,
+   "chunks": [
+    186688
+   ]
+  },
+  {
+   "groups": 22,
+   "render_verts": 321,
+   "tris": 428,
+   "copies": 1,
+   "chunks": [
+    216960
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 343,
+   "tris": 482,
+   "copies": 1,
+   "chunks": [
+    243632
+   ]
+  }
+ ],
+ "sudino_tyranno": [
+  {
+   "groups": 18,
+   "render_verts": 392,
+   "tris": 438,
+   "copies": 1,
+   "chunks": [
+    21424
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 653,
+   "tris": 732,
+   "copies": 1,
+   "chunks": [
+    64144
+   ]
+  },
+  {
+   "groups": 18,
+   "render_verts": 369,
+   "tris": 444,
+   "copies": 1,
+   "chunks": [
+    104272
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 503,
+   "tris": 640,
+   "copies": 1,
+   "chunks": [
+    139904
+   ]
+  },
+  {
+   "groups": 19,
+   "render_verts": 249,
+   "tris": 310,
+   "copies": 1,
+   "chunks": [
+    170560
+   ]
+  },
+  {
+   "groups": 20,
+   "render_verts": 397,
+   "tris": 500,
+   "copies": 1,
+   "chunks": [
+    197312
+   ]
+  }
+ ],
+ "sudino_velocir": [
+  {
+   "groups": 22,
+   "render_verts": 362,
+   "tris": 428,
+   "copies": 2,
+   "chunks": [
+    20848,
+    50224
+   ]
+  },
+  {
+   "groups": 23,
+   "render_verts": 201,
+   "tris": 284,
+   "copies": 2,
+   "chunks": [
+    140720,
+    174560
+   ]
+  },
+  {
+   "groups": 3,
+   "render_verts": 215,
+   "tris": 208,
+   "copies": 2,
+   "chunks": [
+    157584,
+    191424
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 457,
+   "tris": 570,
+   "copies": 2,
+   "chunks": [
+    220480,
+    257488
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 876,
+   "tris": 998,
+   "copies": 1,
+   "chunks": [
+    312160
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 886,
+   "tris": 1002,
+   "copies": 1,
+   "chunks": [
+    387424
+   ]
+  },
+  {
+   "groups": 24,
+   "render_verts": 357,
+   "tris": 390,
+   "copies": 2,
+   "chunks": [
+    440864,
+    468352
+   ]
+  },
+  {
+   "groups": 25,
+   "render_verts": 470,
+   "tris": 504,
+   "copies": 2,
+   "chunks": [
+    500608,
+    536624
+   ]
+  }
+ ]
+}
