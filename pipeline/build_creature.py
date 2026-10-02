@@ -122,7 +122,7 @@ for off in range(chunk - 2 * idx_count - 96, chunk - 2 * idx_count + 96, 2):
 (deg, notall, em), tri_off, tri = best
 print(f"triangles at {tri_off}: {len(tri)} tris, degenerate {deg}, all verts used {not notall}, mean edge {em:.2f}")
 assert chunk - 16 <= best[1] + 2 * idx_count <= chunk, "triangle array does not end just before the mesh chunk"   # su: chunk-8, aq (Dunkleosteus): chunk-6
-assert deg <= max(2, len(tri) // 500), "triangle array not cleanly aligned"
+assert deg <= max(2, len(tri) // 100), "triangle array not cleanly aligned"   # <=1% like extract_static (Megalodon has 4/624 in the game data)
 if deg:                                                   # a few degenerate faces exist in the game data itself; drop them
     keep = np.array([len(set(x)) == 3 for x in tri.tolist()]); print(f"dropping {int((~keep).sum())} degenerate triangles from the game data"); tri = tri[keep]
 
