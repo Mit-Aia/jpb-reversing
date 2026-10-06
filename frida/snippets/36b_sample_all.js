@@ -5,7 +5,8 @@
 const PKG = "/data/data/com.ludia.jurassicpark/", SAMPLES = globalThis.__samples || 900, EVERY = 2;   // set globalThis.__samples (e.g. 3000 = ~100 s) first for long, non-looping wander animations
 const mod = Process.findModuleByName("libJurassicPark.so"), u32 = p => p.readU32();
 const TARGET = globalThis.__targetNV || 0;   // crowded scenes: set globalThis.__targetNV = <nV of the creature> with a tiny snippet first
-const objs = Object.values(globalThis.__objs).filter(o => !TARGET || o.nV === TARGET).sort((a, b) => b.nV - a.nV), first = objs[0];
+const TNB = globalThis.__targetNB || 0;   // optional: also filter by bone-group count (two different meshes can share nSkin)
+const objs = Object.values(globalThis.__objs).filter(o => (!TARGET || o.nV === TARGET) && (!TNB || o.nb === TNB)).sort((a, b) => b.nV - a.nV), first = objs[0];
 const same = objs.filter(o => o.nV === first.nV && o.nb === first.nb);   // 36b: ALL bodies with this mesh size (schools of 3+, e.g. Hybodus) -> anim_A/B/C….bin
 const res = ptr(first.res), w = i => u32(res.add(i * 4)), nb = w(0), nV = first.nV;
 // each creature has its OWN copy of the mesh resource and its OWN bone ids inside the shared bone array (Pteranodon B = A's ids + 1)
